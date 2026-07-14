@@ -1,0 +1,11 @@
+# Barley Hair Transplant - Robots.txt
+# https://www.maofayizhi.cc
+
+User-agent: *
+Allow: /
+
+# Disallow backup and sensitive files
+Disallow: /index_original_backup.html
+
+# Sitemap location
+Sitemap: https://www.maofayizhi.cc/sitemap.xml

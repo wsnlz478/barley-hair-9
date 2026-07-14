@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<!-- ========================================
+ services - Barley Hair Transplant Hospital
+ Page: services.html
+ ======================================== -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hair Transplant Services China | Barley Hair Restoration - All Procedures</title>
+ <meta name="description" content="Discover Barley's complete hair restoration services: hairline design, density enhancement, baldness treatment, eyebrow and beard transplants. Expert surgeons, advanced microneedle technology, affordable prices for international patients.">
+ <meta name="keywords" content="hair transplant services China, hairline restoration, hair density treatment, baldness correction, eyebrow transplant China, beard transplant China, facial hair restoration, hair transplant procedures, FUE services China, affordable hair transplant">
+ <meta name="robots" content="index, follow">
+ <meta name="author" content="Barley Hair Transplant Hospital">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Hair Transplant Services | Barley Hair Transplant Hospital">
+ <meta property="og:description" content="Complete hair restoration services at Barley Hair Transplant Hospital: natural hairline transplant, hair thickening, advanced baldness restoration, artistic eyebrow transplant, beard and body hair transplants.">
+ <meta property="og:url" content="https://www.barleyhair.com/services.html">
+ <meta property="og:site_name" content="Barley Hair Transplant Hospital">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:image" content="https://www.barleyhair.com/Banner/hero-3.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Hair Transplant Services | Barley Hair Transplant Hospital">
+ <meta name="twitter:description" content="Complete hair restoration services at Barley Hair Transplant Hospital.">
+<style>
+ /* Page-specific CSS for services.html */
+ /* Services Grid */
+ .services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px;
+ margin-top: 40px;
+ }
+
+ .service-card {
+ background: var(--white);
+ padding: 40px 30px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-sm);
+ transition: all 0.3s ease;
+ text-align: center;
+ }
+
+ .service-card:hover {
+ transform: translateY(-8px);
+ box-shadow: var(--shadow-lg);
+ }
+
+ .service-icon {
+ width: 70px;
+ height: 70px;
+ background: var(--soft-blue);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 25px;
+ font-size: 32px;
+ color: var(--primary-blue);
+ transition: all 0.3s ease;
+ }
+
+ .service-card:hover .service-icon {
+ background: var(--primary-blue);
+ color: var(--white);
+ }
+
+ .service-card h3 {
+ font-size: 26px;
+ color: var(--primary-blue);
+ margin-bottom: 18px;
+ }
+
+ .service-card p {
+ font-size: 17px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ }
+
+ /* Services Page - Service Details */
+ .service-details-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ gap: 40px;
+ margin-top: 40px;
+ }
+
+ .service-detail-card {
+ background: var(--white);
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: var(--shadow-sm);
+ transition: all 0.3s ease;
+ }
+
+ .service-detail-card:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+ }
+
+ .service-detail-image {
+ width: 100%;
+ height: 250px;
+ overflow: hidden;
+ }
+
+ .service-detail-image img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ }
+
+ .service-detail-content {
+ padding: 30px;
+ }
+
+ .service-detail-icon {
+ width: 60px;
+ height: 60px;
+ background: var(--gradient-primary);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+ font-size: 28px;
+ color: var(--white);
+ }
+
+ .service-info-section {
+ margin-bottom: 25px;
+ }
+
+ .service-info-section h4 {
+ font-size: 18px;
+ color: var(--primary-blue);
+ margin-bottom: 12px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ .service-info-section h4 i {
+ color: var(--accent-gold);
+ }
+
+ .service-info-section p {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ }
+
+ .service-info-section ul {
+ list-style: none;
+ padding-left: 0;
+ }
+
+ .service-info-section ul li {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ padding-left: 25px;
+ position: relative;
+ margin-bottom: 8px;
+ }
+
+ .service-info-section ul li::before {
+ content: '\f00c';
+ font-family: 'Font Awesome 6 Free';
+ font-weight: 900;
+ position: absolute;
+ left: 0;
+ color: var(--accent-gold);
+ font-size: 14px;
+ }
+
+ .service-detail-features {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 15px;
+ margin-top: 20px;
+ }
+
+ .service-feature-item {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 14px;
+ color: var(--text-gray);
+ }
+
+ .service-feature-item i {
+ color: var(--primary-blue);
+ }
+
+ /* Responsive */
+ @media (max-width: 992px) {
+ .service-details-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ @media (max-width: 768px) {
+ .service-details-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .services-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ /* Contact Main Section */
+ .contact-main {
+ padding: 80px 0;
+ background: var(--bg-light);
+ }
+
+ .enhanced-section-header {
+ text-align: center;
+ margin-bottom: 50px;
+ }
+
+ .section-badge {
+ display: inline-block;
+ padding: 8px 20px;
+ background: var(--soft-blue);
+ color: var(--primary-blue);
+ border-radius: 20px;
+ font-size: 14px;
+ font-weight: 600;
+ margin-bottom: 15px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+
+ .enhanced-section-header h1 {
+ font-size: 48px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+ font-weight: 700;
+ }
+
+ .enhanced-section-header p {
+ font-size: 20px;
+ color: var(--text-gray);
+ max-width: 700px;
+ margin: 0 auto;
+ }
+
+ /* Service Detail Section */
+ .service-detail-section {
+ padding: 80px 0;
+ }
+
+ .service-overview-accent {
+ margin-bottom: 60px;
+ }
+
+ .overview-accent-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ align-items: center;
+ }
+
+ .overview-accent-image-wrapper {
+ border-radius: 8px;
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ }
+
+ .overview-accent-image-wrapper img {
+ width: 100%;
+ height: auto;
+ display: block;
+ }
+
+ .overview-accent-subtitle {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 16px;
+ color: var(--primary-blue);
+ font-weight: 600;
+ margin-bottom: 15px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+
+ .overview-accent-content h3 {
+ font-size: 36px;
+ color: var(--primary-blue);
+ margin-bottom: 20px;
+ }
+
+ .overview-accent-content p {
+ font-size: 18px;
+ color: var(--text-gray);
+ line-height: 1.9;
+ margin-bottom: 25px;
+ }
+
+ .overview-accent-features {
+ list-style: none;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+ }
+
+ .overview-accent-feature {
+ display: flex;
+ align-items: start;
+ gap: 15px;
+ }
+
+ .overview-accent-icon {
+ width: 50px;
+ height: 50px;
+ background: var(--soft-blue);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--primary-blue);
+ font-size: 20px;
+ flex-shrink: 0;
+ }
+
+ .overview-accent-text h4 {
+ font-size: 18px;
+ color: var(--primary-blue);
+ margin-bottom: 5px;
+ }
+
+ .overview-accent-text p {
+ font-size: 15px;
+ color: var(--text-gray);
+ margin-bottom: 0;
+ }
+
+ /* Geo Section */
+ .geo-section {
+ padding: 60px 0;
+ }
+
+ .geo-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+ }
+
+ .geo-card {
+ background: var(--white);
+ padding: 35px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-sm);
+ }
+
+ .geo-card h3 {
+ font-size: 24px;
+ color: var(--primary-blue);
+ margin-bottom: 20px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+
+ .geo-card i {
+ font-size: 28px;
+ color: var(--primary-blue);
+ }
+
+ .geo-card ul {
+ list-style: none;
+ }
+
+ .geo-card ul li {
+ font-size: 16px;
+ color: var(--text-gray);
+ margin-bottom: 12px;
+ padding-left: 25px;
+ position: relative;
+ }
+
+ .geo-card ul li:before {
+ content: '\f00c';
+ font-family: 'Font Awesome 6 Free';
+ font-weight: 900;
+ position: absolute;
+ left: 0;
+ color: var(--primary-blue);
+ font-size: 14px;
+ }
+
+ /* Contact Cards */
+ .contact-cards-row {
+ margin-bottom: 50px;
+ }
+
+ .contact-cards-grid-full {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 25px;
+ }
+
+ .compact-contact-card {
+ background: var(--white);
+ padding: 30px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-sm);
+ display: flex;
+ align-items: center;
+ gap: 20px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+
+ .compact-contact-card:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+ }
+
+ .compact-contact-card.primary {
+ background: var(--gradient-primary);
+ color: var(--white);
+ }
+
+ .compact-icon-wrapper {
+ width: 60px;
+ height: 60px;
+ background: var(--soft-blue);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 28px;
+ color: var(--primary-blue);
+ flex-shrink: 0;
+ }
+
+ .compact-contact-card.primary .compact-icon-wrapper {
+ background: rgba(255, 255, 255, 0.2);
+ color: var(--white);
+ }
+
+ .compact-details h4 {
+ font-size: 20px;
+ margin-bottom: 5px;
+ }
+
+ .compact-details p {
+ font-size: 16px;
+ opacity: 0.9;
+ }
+
+ /* Consultation Section */
+ .consultation-row {
+ margin-top: 50px;
+ }
+
+ .consultation-box-full {
+ background: var(--white);
+ padding: 50px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-md);
+ }
+
+ .consultation-box-full h3 {
+ font-size: 32px;
+ color: var(--primary-blue);
+ margin-bottom: 30px;
+ text-align: center;
+ }
+
+ .consultation-content {
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ gap: 40px;
+ }
+
+ .qrcode-section {
+ text-align: center;
+ }
+
+ .qrcode-display {
+ background: var(--soft-blue);
+ padding: 30px;
+ border-radius: 8px;
+ }
+
+ .qrcode-display img {
+ width: 100%;
+ max-width: 200px;
+ border-radius: 8px;
+ margin-bottom: 15px;
+ }
+
+ .qrcode-display p {
+ font-size: 14px;
+ color: var(--text-gray);
+ }
+
+ .benefits-grid-full {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 25px;
+ }
+
+ .benefit-item {
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ padding: 20px;
+ background: var(--soft-blue);
+ border-radius: 8px;
+ }
+
+ .benefit-icon {
+ width: 50px;
+ height: 50px;
+ background: var(--primary-blue);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--white);
+ font-size: 22px;
+ flex-shrink: 0;
+ }
+
+ .benefit-item h4 {
+ font-size: 18px;
+ color: var(--primary-blue);
+ }
+
+ .btn-outline {
+ display: inline-block;
+ padding: 12px 30px;
+ border: 2px solid var(--primary-blue);
+ color: var(--primary-blue);
+ text-decoration: none;
+ border-radius: 8px;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ }
+
+ .btn-outline:hover {
+ background: var(--primary-blue);
+ color: var(--white);
+ }
+
+ /* Responsive adjustments for new styles */
+ @media (max-width: 992px) {
+ .overview-accent-grid,
+ .consultation-content {
+ grid-template-columns: 1fr;
+ gap: 40px;
+ }
+ 
+ .enhanced-section-header h1 {
+ font-size: 38px;
+ }
+ 
+ .overview-accent-content h3 {
+ font-size: 30px;
+ }
+ }
+
+ @media (max-width: 768px) {
+ .overview-accent-features,
+ .benefits-grid-full {
+ grid-template-columns: 1fr;
+ }
+ 
+ .enhanced-section-header h1 {
+ font-size: 32px;
+ }
+ 
+ .enhanced-section-header p {
+ font-size: 17px;
+ }
+ 
+ .consultation-box-full {
+ padding: 30px;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- ============ Header ============ -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <img src="images/logo.png" alt="Barley Hair Transplant Hospital">
+ <span class="logo-text-desktop">Barley Hair Transplant Hospital</span><span class="logo-text-mobile">Barley Hair Hospital</span>
+ </div>
+ <div class="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html" class="active">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+
+ <!-- ============ Hero Section ============ -->
+ <section class="hero">
+ <div class="hero-slides" id="heroSlides">
+ <div class="hero-slide">
+ <img src="Banner/hero-7.jpg" alt="Barley Hair Procedures">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Comprehensive Hair Treatments</h2>
+ <p>From hairline sculpting to beard enhancement and eyebrow artistry, Barley delivers customized solutions for every hair restoration need.</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-20.jpg" alt="Barley Hair Procedures">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Tailored Just For You</h2>
+ <p>Bespoke hairline design, precise microneedle implantation, and complete treatments adapted to your individual requirements and facial structure.</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-18.jpg" alt="Barley Hair Procedures">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Professional Care & Verified Outcomes</h2>
+ <p>Every procedure performed by skilled surgeons using cutting-edge methods for natural, lasting results you'll love.</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- All Services Grid -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Procedures</h2>
+ <div class="gold-divider"></div>
+ <p>Discover our full range of hair restoration treatments</p>
+ </div>
+ <div class="services-grid">
+ <a href="hairline-transplant.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-user"></i>
+ </div>
+ <h3>Hairline Transplantation</h3>
+ <p>Bespoke hairline sculpting for authentic-looking results that harmonize with your facial structure and bring back a younger appearance using our state-of-the-art microneedle technology.</p>
+ </a>
+ <a href="hair-thickening.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-plus-circle"></i>
+ </div>
+ <h3>Hair Thickening</h3>
+ <p>Enhance volume through precise microneedle implantation that enables superior density positioning while preserving organic growth patterns for fuller, denser hair.</p>
+ </a>
+ <a href="baldness-restoration.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-user-tie"></i>
+ </div>
+ <h3>Baldness Restoration</h3>
+ <p>Complete coverage for all levels of crown and vertex hair loss using our proprietary microneedle system for authentic-looking restoration.</p>
+ </a>
+ <a href="eyebrow-transplant.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-eye"></i>
+ </div>
+ <h3>Eyebrow Transplant</h3>
+ <p>Organic-looking eyebrow enhancement with meticulous positioning that thoughtfully crafts and places eyebrows to complement your facial aesthetics for fullness and definition.</p>
+ </a>
+ <a href="beard-transplant.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-mask"></i>
+ </div>
+ <h3>Beard Transplant</h3>
+ <p>Achieve the ideal beard or mustache through artistic follicle placement that addresses sparse patches and delivers a complete, masculine appearance that enhances your features.</p>
+ </a>
+ <a href="services.html#sideburns" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-hat-wizard"></i>
+ </div>
+ <h3>Sideburns Transplant</h3>
+ <p>Rebuild or improve your sideburns with accurate positioning that generates natural-looking density and form, beautifully framing your face.</p>
+ </a>
+ <a href="body-hair-transplant.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-person"></i>
+ </div>
+ <h3>Body Hair Transplant</h3>
+ <p>Body hair procedures for multiple regions with careful positioning that guarantees organic growth patterns and density for the most genuine appearance.</p>
+ </a>
+ <a href="hair-loss-treatment.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-heartbeat"></i>
+ </div>
+ <h3>Hair Loss Treatment</h3>
+ <p>Complete therapies for hair loss featuring medical solutions, PRP sessions, and scalp wellness programs to halt further loss and stimulate healthy regrowth.</p>
+ </a>
+ <a href="hair-care.html" class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-spa"></i>
+ </div>
+ <h3>Hair Care & Maintenance</h3>
+ <p>Expert hair wellness for vibrant hair including customized scalp therapies, nourishment programs, and maintenance plans to sustain lasting hair vitality.</p>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Service Details -->
+ <section class="services">
+ <div class="container">
+ <div class="section-title">
+ <h1>Our Procedures</h1>
+ <div class="gold-divider"></div>
+ <p>Complete hair restoration solutions adapted to your needs</p>
+ </div>
+ <div class="service-details-grid">
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="manHairline/manHairline-1.jpg" alt="Hairline Transplantation">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-user"></i>
+ </div>
+ <h3>Hairline Transplantation</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Bespoke hairline design and placement for authentic-looking outcomes. Our skilled practitioners utilize cutting-edge microneedle methods to craft a tailored hairline that harmonizes with your facial proportions and delivers a refreshed, younger appearance. We thoughtfully craft the hairline based on your age, face ratios, and individual preferences.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>Gentlemen and ladies experiencing receding hairlines</li>
+ <li>Those looking to reclaim a younger-looking hairline</li>
+ <li>People with stabilized hair loss patterns</li>
+ <li>Individuals wanting to improve their facial harmony</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>Authentic, undetectable outcomes</li>
+ <li>Tailored design for each individual</li>
+ <li>Minimally invasive microneedle approach</li>
+ <li>Quick healing with limited downtime</li>
+ <li>Lifelong, permanent results</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Bespoke hairline planning</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Authentic-looking outcomes</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Quick recovery period</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Lifelong, permanent outcomes</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="manBald/manBald-1.jpg" alt="Hair Thickening">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-plus-circle"></i>
+ </div>
+ <h3>Hair Thickening</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Boost volume in thinning regions through precise microneedle placement. Our cutting-edge method enables superior density positioning while maintaining organic growth patterns, delivering fuller, denser hair. This treatment is perfect for individuals experiencing scattered thinning or seeking to add volume to specific zones.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>People experiencing scattered hair thinning</li>
+ <li>Those seeking to boost volume in existing hair</li>
+ <li>Individuals with crown or vertex thinning</li>
+ <li>Anyone looking to improve hair density</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>20-30% greater density than conventional methods</li>
+ <li>Organic direction positioning for authentic appearance</li>
+ <li>Gentle impact on the scalp</li>
+ <li>Speedy healing period</li>
+ <li>Results blend seamlessly with your natural hair</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>20-30% superior density</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Organic direction positioning</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Gentle scalp procedure</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Speedy healing</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="manBald/manBald-2.jpg" alt="Baldness Restoration">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-user-tie"></i>
+ </div>
+ <h3>Baldness Restoration</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Complete restoration for crown and vertex hair loss. We provide comprehensive solutions for all degrees of hair loss, from early thinning to advanced baldness, utilizing our proprietary microneedle system. Our method is customized to your specific level of baldness and available donor hair.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>Gentlemen with Norwood pattern baldness</li>
+ <li>Ladies with female pattern baldness</li>
+ <li>Individuals with adequate donor hair supply</li>
+ <li>People in excellent overall health</li>
+ <li>Those with practical expectations</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>Strategic planning for optimal coverage</li>
+ <li>Staged approach when needed for extensive areas</li>
+ <li>Authentic-looking density and restoration</li>
+ <li>Cutting-edge microneedle implantation</li>
+ <li>Enduring, authentic outcomes</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>All levels of baldness</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Strategic planning</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Multiple sessions available</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Authentic-looking restoration</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="Eyebrow/Eyebrow-1.jpg" alt="Eyebrow Transplant">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-eye"></i>
+ </div>
+ <h3>Eyebrow Transplant</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Authentic-looking eyebrow enhancement with accurate positioning. Our experts carefully craft and place eyebrows that align with your facial aesthetics, delivering fullness and definition. We focus on eyebrow shape, arch, and direction for the most genuine results.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>People with sparse or thin eyebrows</li>
+ <li>Those with over-plucked eyebrow areas</li>
+ <li>Individuals looking to improve eyebrow shape</li>
+ <li>People experiencing eyebrow loss from medical conditions</li>
+ <li>Anyone seeking permanent eyebrow enhancement</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>Custom eyebrow design for your facial structure</li>
+ <li>Accurate positioning for organic appearance</li>
+ <li>Organic growth direction alignment</li>
+ <li>Enduring, long-lasting outcomes</li>
+ <li>Creative approach for optimal aesthetics</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Custom eyebrow design</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Accurate positioning</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Organic growth direction</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Enduring outcomes</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="Beard/Beard-1.jpg" alt="Beard Transplant">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-mask"></i>
+ </div>
+ <h3>Beard Transplant</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Achieve the ideal beard or mustache through creative follicle placement. Whether you want to address sparse patches or develop a complete, masculine beard, our skilled practitioners can help you reach your desired appearance. We specialize in organic-looking facial hair restoration that enhances your features.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>Gentlemen with sparse or thin beard growth</li>
+ <li>Individuals seeking to enhance facial masculinity</li>
+ <li>Those looking to address mustache or sideburn gaps</li>
+ <li>Anyone desiring a fuller, more defined beard</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>Creative design and placement</li>
+ <li>Completely organic appearance</li>
+ <li>Ability to address sparse patches perfectly</li>
+ <li>Enduring, organic growth</li>
+ <li>Customizable beard style and density</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Creative design</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Organic appearance</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Address sparse patches</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Enduring growth</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="service-detail-card">
+ <div class="service-detail-image">
+ <img src="women/women-1.jpg" alt="Hair Loss Treatment">
+ </div>
+ <div class="service-detail-content">
+ <div class="service-detail-icon">
+ <i class="fas fa-heartbeat"></i>
+ </div>
+ <h3>Hair Loss Treatment</h3>
+ 
+ <div class="service-info-section">
+ <h4><i class="fas fa-info-circle"></i> Project Introduction</h4>
+ <p>Complete therapies for various types of hair loss conditions. We provide a range of non-surgical treatments featuring medical solutions, PRP, and scalp wellness to help prevent further loss and stimulate healthy regrowth. Our medical approach is customized to your specific hair loss pattern and requirements.</p>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-users"></i> Suitable Candidates</h4>
+ <ul>
+ <li>Individuals in initial stages of hair loss</li>
+ <li>Those seeking to prevent additional hair loss</li>
+ <li>People looking for non-surgical alternatives</li>
+ <li>Anyone wanting to improve hair vitality</li>
+ <li>Post-procedure patients needing maintenance</li>
+ </ul>
+ </div>
+
+ <div class="service-info-section">
+ <h4><i class="fas fa-star"></i> Surgical Advantages</h4>
+ <ul>
+ <li>Multiple medical therapy choices available</li>
+ <li>PRP sessions for enhanced regrowth</li>
+ <li>Expert scalp wellness programs</li>
+ <li>Preventative solutions for lasting vitality</li>
+ <li>Complete approach combining treatments</li>
+ </ul>
+ </div>
+
+ <div class="service-detail-features">
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Medical therapy choices</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>PRP sessions</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Scalp wellness programs</span>
+ </div>
+ <div class="service-feature-item">
+ <i class="fas fa-check"></i>
+ <span>Preventative solutions</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Before & After Gallery -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Real Patient Transformations</h2>
+ <div class="gold-divider"></div>
+ <p>See the impressive results our patients have achieved with our treatments</p>
+ </div>
+ <div class="gallery-grid" id="beforeAfterGallery">
+ <div class="gallery-item">
+ <img src="manBald/manBald-19.jpg" alt="Male Hair Loss">
+ <div class="gallery-overlay">
+ <h4>Exceptional Transformation</h4>
+ <p>Before and after results</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-4.jpg" alt="Female Hair">
+ <div class="gallery-overlay">
+ <h4>Authentic Outcomes</h4>
+ <p>Genuine patient transformation</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-1.jpg" alt="Female Hair">
+ <div class="gallery-overlay">
+ <h4>Transformation Finished</h4>
+ <p>Life-enhancing results</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-13.jpg" alt="Male Hair Loss">
+ <div class="gallery-overlay">
+ <h4>Significant Enhancement</h4>
+ <p>Before and after images</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-2.jpg" alt="Male Hair Loss">
+ <div class="gallery-overlay">
+ <h4>Authentic Looking</h4>
+ <p>Expert hair restoration</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-33.jpg" alt="Female Hair">
+ <div class="gallery-overlay">
+ <h4>Ideal Density</h4>
+ <p>Excellent outcomes</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ Doctor Patient Photos ============ -->
+ <section class="technology">
+ <div class="container">
+ <div class="section-title">
+ <h2>Happy Patients</h2>
+ <div class="gold-divider"></div>
+ <p>Real moments with our satisfied patients after their procedures</p>
+ </div>
+ <div class="photos-grid" id="doctorPatientPhotos">
+ <div class="photo-item">
+ <img src="Photos/Photos-73.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Satisfied Client</h4>
+ <p>Posing with our medical staff after successful procedure</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-37.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Thankful Patient</h4>
+ <p>Celebrating wonderful outcomes with our physicians</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-24.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Success Narrative</h4>
+ <p>Another pleased client shares their happiness</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-45.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Smile Recovered</h4>
+ <p>Client with our specialist before discharge</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-23.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Authentic Look Recovered</h4>
+ <p>Delighted client with our expert post-treatment</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-70.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Life Transformed</h4>
+ <p>Enthusiastic client presenting their refreshed look</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-65.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Confidence Restored</h4>
+ <p>Client delighted with their makeover</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-55.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Fresh Path Begins</h4>
+ <p>Client embarking anew with fantastic outcomes</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Testimonials -->
+ <section class="testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>What Our Patients Say</h2>
+ <div class="gold-divider"></div>
+ <p>Hear from our satisfied patients around the world</p>
+ </div>
+ <div class="testimonials-grid" id="testimonials">
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I had a receding hairline for over eight years and kept putting off treatment. When I finally went in for a hairline restoration, the surgeon mapped out the entire design before a single graft was placed. I could see exactly what the result would look like. Eight months later, my hairline frames my face perfectly — it's the best money I've ever spent."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">TH</div>
+ <div class="testimonial-info">
+ <h4>Tom Henderson</h4>
+ <p><i class="fas fa-map-marker-alt"></i> United States</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I went for hair thickening on the crown because I could see right through my hair in bright light. The doctor used about 1,800 grafts to fill the thinning area, and the difference is night and day. Even my barber asked what I'd been doing — he said my hair density looks completely natural."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">KN</div>
+ <div class="testimonial-info">
+ <h4>Ken Nakamura</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Japan</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"As a woman dealing with diffuse thinning, I was terrified that a transplant would look obvious. Barley's approach was incredibly delicate — they placed single grafts between my existing hairs without damaging what I still had. Nobody at work even knew I'd had a procedure, they just started saying I looked 'healthier.'" </p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">CR</div>
+ <div class="testimonial-info">
+ <h4>Claire Rousseau</h4>
+ <p><i class="fas fa-map-marker-alt"></i> France</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"My beard had patchy areas that never grew in properly since my late teens. The beard transplant filled every gap perfectly, and the hair grows in the exact same direction as my natural beard. I can finally grow a full beard without looking patchy — my wife says it completely changed my face shape."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">OM</div>
+ <div class="testimonial-info">
+ <h4>Omar Al-Mansouri</h4>
+ <p><i class="fas fa-map-marker-alt"></i> United Arab Emirates</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I lost most of my eyebrows in a car accident years ago and had been drawing them on every morning for over a decade. The eyebrow transplant gave me a natural, permanent solution — the precision they applied made each brow perfectly symmetrical. I don't even own an eyebrow pencil anymore."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">PD</div>
+ <div class="testimonial-info">
+ <h4>Prisha Deshmukh</h4>
+ <p><i class="fas fa-map-marker-alt"></i> India</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I had a Norwood 5 level of hair loss, basically a horseshoe pattern around the sides. The team planned a two-session approach covering both the hairline and the crown, and the combined result was more than I hoped for. I went from looking 15 years older to looking my actual age again."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">JV</div>
+ <div class="testimonial-info">
+ <h4>Johan van der Berg</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Netherlands</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ Hospital Environment ============ -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Clinic Environment</h2>
+ <div class="gold-divider"></div>
+ <p>Experience our modern and comfortable facilities</p>
+ </div>
+ <div class="hospital-grid" id="hospitalGallery">
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-23.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Modern Clinic</h4>
+ <p>Our state-of-the-art facility</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-4.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Comfortable Waiting Area</h4>
+ <p>Relax in our premium lounge</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-65.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Operating Room</h4>
+ <p>Sterile and advanced</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-17.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Consultation Room</h4>
+ <p>Private and professional</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-61.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Recovery Area</h4>
+ <p>Comfortable post-op space</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-1.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Reception</h4>
+ <p>Welcoming entrance</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Locations -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Common Questions About Our Procedures</h2>
+ <div class="gold-divider"></div>
+ <p>Discover answers to frequently asked questions by our patients</p>
+ </div>
+ <div id="faqContainer">
+ <div class="faq-item active">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How do I know which hair transplant procedure is best for me</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ The best procedure for you depends on your specific hair loss pattern, donor hair availability, and desired outcomes. During your free consultation at Barley, our expert surgeons will evaluate your scalp, discuss your goals, and recommend the most suitable treatment— —ther that's a hairline transplant, hair thickening, or another service.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What exactly is involved in a hairline transplant at Barley</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Our hairline transplant involves harvesting individual follicles from your donor area using our patented microneedle technology, then artistically placing them along a custom-designed hairline. The procedure is performed under local anesthesia, typically takes 4-8 hours depending on graft count, and results in a natural-looking frame for your face that lasts a lifetime.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can hair thickening be done without shaving my head</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes! Our no-shave hair thickening option is particularly popular among international patients. We can selectively extract and implant follicles while keeping your existing hair at its current length. This allows for a more discreet procedure and faster return to your normal routine without obvious signs of having had surgery.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How many grafts do I need for crown baldness restoration</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ The number of grafts needed for crown restoration varies based on the extent of your baldness and desired density. Typically, crown procedures require 1,500-3,000 grafts. Our microneedle technology allows for higher density per session, so you may need fewer grafts to achieve comparable results to traditional methods.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Are eyebrow transplants painful</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Eyebrow transplants are performed under local anesthesia, so you won't feel pain during the procedure. You may experience some pressure or mild tugging, but most patients find the experience very comfortable. After the procedure, mild soreness is normal and easily managed with over-the-counter pain medication.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What's the difference between a beard transplant and scalp hair transplant</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ While the basic principle of follicle extraction and implantation is the same, beard transplants require more precise angle and direction placement to match natural facial hair growth patterns. Our surgeons have specialized expertise in artistic facial hair design to ensure your beard or mustache looks completely natural and matches your desired style.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How long after a hair transplant can I return to work</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Most patients can return to desk work within 3-5 days after their procedure. For physical labor or strenuous activities, we recommend waiting 10-14 days. Our microneedle technology minimizes trauma and speeds up healing, so you'll recover faster than with traditional FUE methods. We'll provide specific guidance based on your procedure type.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can I combine multiple procedures in one session</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Absolutely! Many patients combine hairline restoration with hair thickening, or add a beard transplant to their scalp procedure. Combining treatments in one session can be more efficient and cost-effective. Your surgeon will advise on safe graft limits per session and whether staging your treatments would yield better results.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Will my transplanted hair look natural after it grows in</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes! Our 360rotating microneedle implant pen allows surgeons to place each follicle at the exact angle and direction of your natural hair growth. Combined with our surgeons' artistic eye for hairline design, the results are completely undetectable— —n barbers and hairstylists typically can't tell the difference.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What is PRP treatment and how does it help with hair loss</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ PRP (Platelet-Rich Plasma) treatment involves drawing a small amount of your blood, processing it to concentrate the platelets, and injecting it into your scalp. The growth factors in PRP stimulate dormant hair follicles, improve hair thickness, and can slow down hair loss. It's often recommended as a complementary treatment alongside hair transplants.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Do you offer body hair transplants for chest or pubic areas</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes, we offer body hair transplantation for various areas including the chest, eyebrows, pubic region, and other body parts requiring enhancement. Body hair transplants use the same careful extraction and placement techniques as scalp procedures, with attention paid to matching the unique growth patterns of each body region.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What happens if my transplanted hair doesn't grow properly</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ With our advanced microneedle technology and experienced surgical teams, graft survival rates exceed 95%. In the rare event that some grafts don't take, we offer complimentary touch-up sessions within the first year to address any areas of concern. Your surgeon will discuss this during your consultation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can women get the same hair transplant procedures as men</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes! Women can benefit from all our hair restoration services including hairline lowering, hair thickening, and eyebrow transplants. Female pattern hair loss often presents differently than male baldness, and our surgeons have specialized techniques for women. We treat many international female patients seeking hair restoration in China.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How much does each service cost for international patients</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Pricing varies based on the procedure type, number of grafts needed, and technique used. Generally, hairline transplants start at approximately 2,000-3,000 USD, while full baldness restoration can range from 3,000-6,000 USD. Our prices are 50-70% lower than Western countries for the same or better quality. You'll receive a detailed quote during your free consultation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Is hair loss treatment effective for all types of baldness</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Non-surgical hair loss treatments are most effective for early-stage hair loss, diffuse thinning, and conditions like telogen effluvium. For advanced pattern baldness, a transplant is usually the most effective solution. During your consultation, we'll determine whether medical therapy, a transplant, or a combination approach is best for your specific situation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What should I avoid before my hair transplant procedure</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Before your procedure, avoid blood-thinning medications (like aspirin), alcohol, smoking, and caffeine for at least 1-2 weeks. These can affect bleeding, healing, and graft survival. We'll provide a complete pre-procedure checklist during your consultation. For international patients, we recommend arriving in China at least 2 days before your scheduled procedure.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can I see results immediately after my hair transplant</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Immediately after the procedure, you'll see the transplanted grafts in place, but the full results take time. Transplanted hair typically sheds within 2-4 weeks, then begins regrowing at 3-4 months. Final results are visible at 9-12 months as the hair thickens and matures. Patience is essential for hair transplant success!
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Copy Notification -->
+ <div class="copy-notification" id="copyNotification">
+ <i class="fas fa-check-circle"></i>
+ <span id="copyText">Copied successfully!</span>
+ </div>
+
+ <!-- Contact -->
+ <section class="contact" id="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Contact Us</h2>
+ <div class="gold-divider"></div>
+ <p>Click to copy contact information</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+ <i class="fab fa-weixin"></i>
+ <h4>WeChat</h4>
+ <p>15810155700</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+ <i class="fab fa-whatsapp"></i>
+ <h4>WhatsApp</h4>
+ <p>+86 13730143529</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+ <i class="fas fa-envelope"></i>
+ <h4>Email</h4>
+ <p>hairtransplant@qq.com</p>
+ </div>
+ <div class="contact-item qrcode-card">
+ <img src="images/erweima.jpg" alt="WeChat QR Code">
+ </div>
+ </div>
+ 
+ <!-- Three Column Layout: Form | Info | Image -->
+ <div class="contact-three-column">
+ <div class="contact-form-column">
+ <form id="contactForm" class="contact-form" novalidate>
+ <h3>Get Free Consultation</h3>
+ <div class="form-group">
+ <input type="text" id="contactName" name="nickname" placeholder="Your Name *" required>
+ </div>
+ <div class="form-group">
+ <input type="text" id="contactPhone" name="contact" placeholder="Phone/WeChat/WhatsApp *" required>
+ </div>
+ <div class="form-group">
+ <select id="contactProject" name="project" title="Please select a service">
+ <option value="">Select Service *</option>
+<option value="发际线种植">Hairline Transplant</option>
+<option value="头发加密">Hair Thickening</option>
+<option value="秃顶植发">Baldness Restoration</option>
+<option value="眉毛种植">Eyebrow Transplant</option>
+<option value="胡须种植">Beard Transplant</option>
+<option value="鬓角种植">Sideburns Transplant</option>
+<option value="体毛种植">Body Hair Transplant</option>
+<option value="脱发治疗">Hair Loss Treatment</option>
+<option value="头发养护">Hair Care</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <textarea id="contactMessage" name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+ </div>
+ <button type="button" id="contactSubmitBtn" class="btn btn-primary">Send Message</button>
+ </form>
+ 
+ <div class="about-barley-card">
+ <h4>About Barley</h4>
+ <p>Established by a team of doctors with 31 branches in China's major cities, Barley Microneedle Hair Transplant Hospital has always been pursuing the best technology, better quality and more safety to help you with all kinds of hair loss problems.</p>
+ </div>
+ </div>
+ 
+ <div class="contact-info-column">
+ <div class="contact-info-top">
+ <h3>You Might Also Want to Know</h3>
+ <p>Everyone's hair loss journey and solution are unique due to a variety of factors. Our hair restoration experts will assist you in determining the root cause and the best solution for your hair restoration plan. If you have any questions, please ask; we are happy to assist.</p>
+ </div>
+ <div class="contact-info-bottom">
+ <img src="images/test.jpg" alt="Hair Transplant Consultation">
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="hairline-transplant.html">Hairline Transplant</a></li>
+ <li><a href="hair-thickening.html">Hair Thickening</a></li>
+ <li><a href="baldness-restoration.html">Baldness Restoration</a></li>
+ <li><a href="eyebrow-transplant.html">Eyebrow Transplant</a></li>
+ <li><a href="beard-transplant.html">Beard Transplant</a></li>
+ <li><a href="body-hair-transplant.html">Body Hair Transplant</a></li>
+ <li><a href="scar-hair-transplant.html">Scar Hair Transplant</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Loss Education</h4>
+ <ul>
+ <li><a href="hair-loss-treatment.html">Hair Loss Treatment</a></li>
+ <li><a href="hair-care.html">Hair Care</a></li>
+ <li><a href="minoxidil.html">Minoxidil</a></li>
+ <li><a href="finasteride.html">Finasteride</a></li>
+ <li><a href="male-hair-loss-guide.html">Male Hair Loss Guide</a></li>
+ <li><a href="female-hair-loss-guide.html">Female Hair Loss Guide</a></li>
+ <li><a href="is-hair-loss-genetic.html">Is Hair Loss Genetic</a></li>
+ <li><a href="does-daily-hair-loss-lead-to-balding.html">Daily Hair Loss vs Balding</a></li>
+ <li><a href="hair-loss-calculator.html">Hair Loss Calculator</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Transplant Education</h4>
+ <ul>
+ <li><a href="hair-transplant-cost.html">Hair Transplant Cost</a></li>
+ <li><a href="fue-hair-transplant.html">FUE Hair Transplant</a></li>
+ <li><a href="fut-hair-transplant.html">FUT Hair Transplant</a></li>
+ <li><a href="no-shave-hair-transplant.html">No-Shave Hair Transplant</a></li>
+ <li><a href="hair-transplant-process.html">Hair Transplant Process</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="reviews.html">Patient Reviews</a></li>
+ <li><a href="travel-to-china.html">Travel to China</a></li>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copyright">
+ <p>&copy; 2006-2026 Barley Hair Transplant Hospital. All rights reserved.</p>
+ <p class="footer-details">Pioneer in microneedle hair transplant technology | 30+ clinics worldwide</p>
+ <p class="footer-disclaimer">Disclaimer: The information on this website is for educational purposes only and does not constitute medical advice. Please consult with a qualified healthcare professional for personalized treatment recommendations.</p>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Back to Top -->
+ <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/main.js"></script>
+ 
+ <script>
+ // — form2026.js - — — —
+ window.ZF_FORM_CONFIG = {
+ wechat: "15810155700",
+ qrcode: { enable: false, src: "/images/erweima.jpg" },
+ display: {
+ pcFloat: true,
+ mobileMode: "mini"
+ },
+ wechatRow: {
+ enable: false
+ },
+ language: {
+ enable: true,
+ showSwitch: false,
+ default: "en"
+ }
+ };
+ </script>
+ <script src="/sendemail/form2026.js"></script>
+</body>
+</html>

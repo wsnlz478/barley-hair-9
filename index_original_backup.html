@@ -1,0 +1,1751 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Hair Transplant Hospital | Hair Transplant Clinic China | FUE Hair Restoration & Microneedle Surgery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #e74c3c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .hero-slides {
+            display: flex;
+            transition: transform 0.6s ease;
+        }
+        
+        .hero-slide {
+            min-width: 100%;
+            position: relative;
+            height: 520px;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 0 40px 40px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(44,62,80,0.3) 0%, rgba(44,62,80,0.7) 100%);
+            border-radius: 0 0 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 0 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 44px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(231,76,60,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .hero-nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        
+        .hero-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .hero-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            grid-column: 1 / -1;
+        }
+        
+        .stat-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .stat-box h3 {
+            font-size: 32px;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        
+        .stat-box p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .about-video {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .about-video video {
+            width: 100%;
+            display: block;
+        }
+        
+        /* Why Choose Us */
+        .why-choose-us {
+            background: white;
+        }
+        
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .why-choose-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .why-choose-card:hover {
+            transform: translateY(-10px);
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: white;
+        }
+        
+        .why-choose-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .why-choose-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: white;
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Technology Section */
+        .technology {
+            background: white;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .tech-video {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .tech-video video {
+            width: 100%;
+            display: block;
+        }
+        
+        .tech-text h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .tech-text p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .tech-features {
+            margin-top: 30px;
+        }
+        
+        .tech-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .tech-feature i {
+            color: #e74c3c;
+            font-size: 24px;
+            margin-top: 3px;
+        }
+        
+        .tech-feature span {
+            color: #555;
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            aspect-ratio: 1;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+        }
+        
+        .gallery-overlay h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Photos Grid */
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .photo-item {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            aspect-ratio: 1;
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-caption {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .photo-caption h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .photo-caption p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 30px;
+        }
+        
+        .testimonial-stars {
+            color: #f39c12;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .testimonial-info h4 {
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .testimonial-info p {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Hospital Environment */
+        .hospital-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .hospital-item {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hospital-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .hospital-caption {
+            background: white;
+            padding: 20px;
+        }
+        
+        .hospital-caption h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .hospital-caption p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Locations */
+        .locations {
+            background: white;
+        }
+        
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .location-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .location-item:hover {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .location-item i {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .location-item span {
+            font-weight: 500;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: #e74c3c;
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: #666;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Contact */
+        .contact {
+            background: white;
+        }
+        
+        .contact-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+        
+        .contact-item {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 30px;
+            border-radius: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .contact-item i {
+            font-size: 42px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .contact-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item p {
+            opacity: 0.9;
+            font-size: 15px;
+        }
+        
+        .contact-item.qrcode-card {
+            position: relative;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+        
+        .contact-item.qrcode-card img {
+            max-width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            border-radius: 15px;
+            background: white;
+            padding: 10px;
+        }
+        
+        .qrcode-box {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .qrcode-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+        
+        .qrcode-box p {
+            color: #2c3e50;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        
+        /* Copy notification */
+        .copy-notification {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copy-notification.show {
+            display: flex;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .copy-notification i {
+            color: #4ade80;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        /* Contact item clickable */
+        .contact-item.clickable {
+            cursor: pointer;
+        }
+        
+        .contact-item.clickable:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero-slide {
+                height: 380px;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .about-grid, .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+<meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="China Hair Transplant Clinic China | FUE Hair Restoration & Microneedle Surgery">
+    <meta property="og:description" content="Premier hair transplant services in China">
+    <meta property="og:site_name" content="China Hair Transplant Hospital">
+    <meta property="og:locale" content="en_US">
+    
+    </head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Barley Hair Transplant">
+                    <span>Barley Hair Transplant</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slides" id="heroSlides">
+            <!-- Slides will be inserted by JavaScript -->
+        </div>
+        <!-- <div class="hero-nav" id="heroNav"></div> -->
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Pioneer and Leader of Microneedle Hair Transplant in China</h2>
+                    <p>Barley Hair Medical Group is a leading medical group in China's high-end hair treatment services industry. We are the pioneer and leader of microneedle hair transplant and no-shave hair transplant in China.</p>
+                    <p>For 5 consecutive years, we have achieved the number one position in hair transplant surgery volume and hair loss treatment volume in first-tier cities across China. With our core hair transplant technologies, we have become the leader in innovation and development in China's hair health industry.</p>
+                </div>
+                <div class="about-video">
+                    <video controls>
+                        <source src="https://www.barleyhair.com/images/hospital.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>30+</h3>
+                    <p>Direct-operated clinics worldwide</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10+</h3>
+                    <p>Patented microneedle technologies</p>
+                </div>
+                <div class="stat-box">
+                    <h3>18+</h3>
+                    <p>Years of experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100K+</h3>
+                    <p>Successful procedures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Hair Transplant Services</h2>
+                <p>Comprehensive solutions tailored to your unique hair loss needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Hairline Transplantation</h3>
+                    <p>Personalized hairline design and transplantation for natural-looking results.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3>Hair Thickening</h3>
+                    <p>Add density to thinning areas with precision microneedle implantation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Baldness Restoration</h3>
+                    <p>Comprehensive restoration for crown and vertex baldness.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Eyebrow Transplant</h3>
+                    <p>Natural-looking eyebrow restoration with precise placement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mask"></i>
+                    </div>
+                    <h3>Beard Transplant</h3>
+                    <p>Create the perfect beard or mustache with artistic implantation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hat-wizard"></i>
+                    </div>
+                    <h3>Sideburns Transplant</h3>
+                    <p>Restore or enhance sideburns for a more masculine appearance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-person"></i>
+                    </div>
+                    <h3>Body Hair Transplant</h3>
+                    <p>Body hair transplantation for chest, pubic, and other areas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Hair Loss Treatment</h3>
+                    <p>Comprehensive treatments for various types of hair loss conditions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Hair Care & Maintenance</h3>
+                    <p>Professional hair care and maintenance treatments for healthy hair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-video">
+                    <video controls>
+                        <source src="https://www.barleyhair.com/images/implanterpen.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="tech-text">
+                    <h2>Barley Microneedle Implant Pen</h2>
+                    <p>Microneedle hair transplant, also known as implant pen technology, works by placing individual hair follicles into the hollow tip of the implant pen, then directly pushing the follicle into the pre-designed recipient area of the scalp. The pen can be rotated 360掳 to match natural hair growth direction, significantly reducing trauma and patient pain while avoiding secondary follicle damage.</p>
+                    <div class="tech-features">
+                        <div class="tech-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Smaller incision (0.6-1.0mm) - 1/3 smaller</span>
+                        </div>
+                        <div class="tech-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Minimal trauma, fast recovery</span>
+                        </div>
+                        <div class="tech-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Wash hair in 24 hours</span>
+                        </div>
+                        <div class="tech-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>20-30% higher density</span>
+                        </div>
+                        <div class="tech-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>360掳 rotation for natural direction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Barley?</h2>
+                <p>Discover why we're the trusted choice for hair restoration worldwide</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>18+ Years Experience</h3>
+                    <p>Pioneer and leader in microneedle hair transplant technology since 2006</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>30+ Direct-operated clinics</h3>
+                    <p>Across major cities in China, all with the same high standards</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>10+ Patented Technologies</h3>
+                    <p>Innovative microneedle and implant pen technology for superior results</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>100K+ Successful Procedures</h3>
+                    <p>Trusted by patients from around the globe for Remarkable results</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>English-speaking staff</h3>
+                    <p>Full English support for international patients throughout treatment</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety First</h3>
+                    <p>State-of-the-art facilities and strict safety protocols for your peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Real Results</h2>
+                <p>See the amazing transformations our patients have achieved</p>
+            </div>
+            <div class="gallery-grid" id="beforeAfterGallery">
+                <!-- Gallery items will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Patient Photos -->
+    <section class="technology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Happy Patients</h2>
+                <p>Moments captured with our satisfied patients</p>
+            </div>
+            <div class="photos-grid" id="doctorPatientPhotos">
+                <!-- Photos will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Patients Say</h2>
+                <p>Hear from our satisfied patients around the world</p>
+            </div>
+            <div class="testimonials-grid" id="testimonials">
+                <!-- Testimonials will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Environment -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Clinic Environment</h2>
+                <p>Experience our modern and comfortable facilities</p>
+            </div>
+            <div class="hospital-grid" id="hospitalGallery">
+                <!-- Hospital photos will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Clinic Locations</h2>
+                <p>Find our hospitals in major cities across China</p>
+            </div>
+            <div class="locations-grid">
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Shanghai</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Beijing</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Shenzhen</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Guangzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Chongqing</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Chengdu</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Hangzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Wuhan</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nanjing</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ningbo</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Qingdao</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Zhengzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Foshan</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dongguan</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Fuzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Xi'an</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dalian</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Shenyang</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Xiamen</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nantong</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Changzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Xuzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Wenzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kunming</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Taiyuan</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Hefei</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Changsha</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nanchang</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Harbin</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jinan</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Taizhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Yangzhou</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nanning</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kunshan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about hair transplantation</p>
+            </div>
+            <div id="faqContainer">
+                <!-- FAQ items will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Copy Notification -->
+    <div class="copy-notification" id="copyNotification">
+        <i class="fas fa-check-circle"></i>
+        <span id="copyText">Copied successfully!</span>
+    </div>
+
+    <!-- Contact -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Click to copy contact information</p>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+                    <i class="fab fa-weixin"></i>
+                    <h4>WeChat</h4>
+                    <p>15810155700</p>
+                </div>
+                <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <p>+86 13730143529</p>
+                </div>
+                <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>hairtransplant@qq.com</p>
+                </div>
+                <div class="contact-item qrcode-card">
+                    <img src="images/erweima.jpg" alt="WeChat QR Code">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Hairline Transplant</a></li>
+                        <li><a href="services.html">Hair Thickening</a></li>
+                        <li><a href="services.html">Baldness Restoration</a></li>
+                        <li><a href="services.html">Eyebrow Transplant</a></li>
+                        <li><a href="services.html">Beard Transplant</a></li>
+                        <li><a href="services.html">Body Hair Transplant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hair Loss Treatment</h4>
+                    <ul>
+                        <li><a href="services.html">Hair Loss Treatment</a></li>
+                        <li><a href="services.html">Hair Care</a></li>
+                        <li><a href="faq.html">Minoxidil</a></li>
+                        <li><a href="faq.html">Finasteride</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hair Transplant Cost</h4>
+                    <ul>
+                        <li><a href="services.html">FUE Hair Transplant</a></li>
+                        <li><a href="technology.html">FUT Hair Transplant</a></li>
+                        <li><a href="technology.html">No-Shave Hair Transplant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="reviews.html">Patient Reviews</a></li>
+                        <li><a href="travel-to-china.html">Travel to China</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Barley Hair Transplant Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Helper function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Hero images
+        const heroImages = [];
+        for (let i = 1; i <= 23; i++) {
+            heroImages.push(`Banner/hero-${i}.jpg`);
+        }
+        const heroTexts = [
+            { title: "Premium Hair Transplant in China", subtitle: "Experience world-class hair restoration with Barley - China's pioneer and leader in microneedle hair transplant technology since 2006." },
+            { title: "Natural Results That Last", subtitle: "With 30+ direct-operated clinics, 10+ patented technologies, and Sullivan-certified excellence, we deliver Remarkable results for patients from around the globe." },
+            { title: "Transform Your Look Today", subtitle: "Free consultation available in English! Contact us now to start your hair restoration journey." },
+            { title: "Microneedle Technology Leader", subtitle: "Our revolutionary implant pen ensures 360掳 rotation for natural direction and minimal trauma." },
+            { title: "18+ Years of Excellence", subtitle: "Trust the pioneer and leader of microneedle hair transplant in China." }
+        ];
+
+        // Before & After images
+        const beforeAfterImages = [];
+        for (let i = 1; i <= 5; i++) beforeAfterImages.push({ path: `Beard/Beard-${i}.jpg`, type: 'Beard' });
+        for (let i = 1; i <= 2; i++) beforeAfterImages.push({ path: `Eyebrow/Eyebrow-${i}.jpg`, type: 'Eyebrow' });
+        for (let i = 1; i <= 26; i++) beforeAfterImages.push({ path: `manBald/manBald-${i}.jpg`, type: 'Male Baldness' });
+        for (let i = 1; i <= 35; i++) beforeAfterImages.push({ path: `manHairline/manHairline-${i}.jpg`, type: 'Male Hairline' });
+        for (let i = 1; i <= 33; i++) beforeAfterImages.push({ path: `women/women-${i}.jpg`, type: 'Female Hair' });
+
+        const beforeAfterCaptions = [
+            { title: "Amazing Transformation", desc: "Before and after comparison" },
+            { title: "Natural Results", desc: "Real patient transformation" },
+            { title: "Transformation Complete", desc: "Remarkable results" },
+            { title: "Dramatic Improvement", desc: "Before and after photos" },
+            { title: "Natural Looking", desc: "Professional hair restoration" },
+            { title: "Perfect Density", desc: "Outstanding results" },
+            { title: "Remarkable Transformation", desc: "Before and after comparison" },
+            { title: "New Look, New Life", desc: "Patient success story" },
+            { title: "Remarkable Results", desc: "Real patient photos" },
+            { title: "Excellent Results", desc: "Before and after comparison" }
+        ];
+
+        // Copy to clipboard function
+        function copyToClipboard(text, type) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showCopyNotification(type);
+                }).catch(() => {
+                    fallbackCopyText(text, type);
+                });
+            } else {
+                fallbackCopyText(text, type);
+            }
+        }
+
+        function fallbackCopyText(text, type) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCopyNotification(type);
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showCopyNotification(type) {
+            const notification = document.getElementById('copyNotification');
+            const copyText = document.getElementById('copyText');
+            copyText.textContent = `${type} copied successfully!`;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Doctor Patient Photos
+        const doctorPatientPhotos = [];
+        for (let i = 1; i <= 76; i++) {
+            doctorPatientPhotos.push(`Photos/Photos-${i}.jpg`);
+        }
+        const photoCaptions = [
+            { title: "Happy Patient", desc: "Posing with our medical team after successful procedure" },
+            { title: "Grateful Patient", desc: "Celebrating fantastic results with our doctors" },
+            { title: "Success Story", desc: "Another satisfied patient shares their joy" },
+            { title: "Smile Restored", desc: "Patient with our specialist before discharge" },
+            { title: "Natural Look Restored", desc: "Happy patient with Dr. Chen post-treatment" },
+            { title: "Transformation Success", desc: "Excited patient showing their new look" },
+            { title: "Thankful Patient", desc: "Grateful patient with our hair restoration expert" },
+            { title: "New Journey", desc: "Patient celebrating successful procedure completion" },
+            { title: "Team Photo", desc: "Our expert team with a very happy patient" },
+            { title: "Happy Moment", desc: "Patient and doctor celebrating amazing results" },
+            { title: "Grateful Patient", desc: "Sharing joy with our medical staff" },
+            { title: "Success Celebration", desc: "Happy patient and team together" }
+        ];
+
+        // Hospital Environment
+        const hospitalImages = [];
+        for (let i = 1; i <= 73; i++) {
+            hospitalImages.push(`Hospital/Hospital-${i}.jpg`);
+        }
+        const hospitalCaptions = [
+            { title: "Modern Clinic", desc: "Our state-of-the-art facility" },
+            { title: "Comfortable Waiting Area", desc: "Relax in our premium lounge" },
+            { title: "Operating Room", desc: "Sterile and advanced" },
+            { title: "Consultation Room", desc: "Private and professional" },
+            { title: "Recovery Area", desc: "Comfortable post-op space" },
+            { title: "Reception", desc: "Welcoming entrance" },
+            { title: "Treatment Room", desc: "Well-equipped and clean" },
+            { title: "Doctor's Office", desc: "Professional workspace" },
+            { title: "Clinic Interior", desc: "Modern and welcoming" },
+            { title: "Premium Facilities", desc: "Designed for your comfort" }
+        ];
+
+        // Testimonials
+        const testimonialsData = [
+            { name: "James Wilson", country: "USA", text: "Amazing results! The team at Barley was incredibly professional and the results exceeded all my expectations. Highly recommend to anyone considering hair transplant.", initials: "JW" },
+            { name: "Sarah Chen", country: "Canada", text: "From start to finish, the experience was wonderful. The doctors were so knowledgeable and the staff spoke excellent English. My hair looks completely natural!", initials: "SC" },
+            { name: "Michael Brown", country: "UK", text: "I traveled from London to Shanghai for my procedure and it was worth every mile. The microneedle technology is incredible and recovery was much faster than I expected.", initials: "MB" },
+            { name: "David Kim", country: "South Korea", text: "Professional, friendly, and the results speak for themselves. I'm so happy with my decision to choose Barley. The aftercare was also fantastic!", initials: "DK" },
+            { name: "Emma Johnson", country: "Australia", text: "Best decision ever! The team made me feel so comfortable throughout the entire process. My hairline looks amazing and I feel so much more confident.", initials: "EJ" },
+            { name: "Robert Taylor", country: "Germany", text: "Exceptional service from beginning to end. The doctors are true experts in their field. I couldn't be happier with the results!", initials: "RT" }
+        ];
+
+        // FAQ Data
+        const faqData = [
+            { q: "How long does a hair transplant procedure take?", a: "The duration depends on the number of grafts needed. Typically, a procedure takes 4-8 hours. Our team will provide you with a precise timeline during your consultation." },
+            { q: "When will I see results?", a: "You'll start seeing new hair growth at 3-4 months. Maximum results are typically visible at 12-18 months post-procedure as the hair continues to thicken and mature." },
+            { q: "Is the procedure painful?", a: "We use local anesthesia to ensure you're comfortable throughout the procedure. Most patients report minimal discomfort and can watch movies or listen to music during treatment." },
+            { q: "How soon can I return to work?", a: "Most patients can return to desk work within 2-3 days. For more physical jobs, we recommend waiting 7-10 days. Our team will provide specific aftercare instructions." },
+            { q: "Are the results permanent?", a: "Yes! The transplanted hair is taken from the donor area (back of the head) which is genetically resistant to DHT and hair loss. These hairs will continue to grow naturally for a lifetime." },
+            { q: "Do you offer consultations in English?", a: "Absolutely! We have English-speaking staff available for consultations and throughout your treatment journey to ensure clear communication." },
+            { q: "What is microneedle hair transplant?", a: "Microneedle transplant uses a specialized implant pen that allows 360掳 rotation for natural hair direction. It results in smaller incisions (0.6-1.0mm), faster recovery, and higher density." },
+            { q: "Can I wash my hair after the procedure?", a: "Yes! With our microneedle technology, most patients can wash their hair gently within 24 hours. We'll provide you with detailed instructions for proper care." },
+            { q: "What is the cost of hair transplant?", a: "The cost varies depending on the number of grafts needed and the specific procedure. We offer competitive pricing and flexible payment options. Contact us for a personalized quote." },
+            { q: "Do you have clinics in other cities?", a: "Yes! We have 30+ direct-operated clinics across major Chinese cities including Beijing, Shanghai, Shenzhen, Guangzhou, Chengdu, and many more." }
+        ];
+
+        // Initialize Hero
+        let currentSlide = 0;
+        const selectedHeroes = shuffleArray(heroImages).slice(0, 3);
+        
+        function renderHero() {
+            const slidesContainer = document.getElementById('heroSlides');
+            
+            slidesContainer.innerHTML = selectedHeroes.map((img, index) => {
+                const text = heroTexts[index % heroTexts.length];
+                return `
+                    <div class="hero-slide">
+                        <img src="${img}" alt="Hero ${index + 1}">
+                        <div class="hero-overlay">
+                            <div class="hero-content">
+                                <h1>${text.title}</h1>
+                                <p>${text.subtitle}</p>
+                                <a href="contact.html" class="btn">Get Free Consultation</a>
+                                <a href="cases.html" class="btn btn-outline">View Cases</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            document.getElementById('heroSlides').style.transform = `translateX(-${index * 100}%)`;
+            document.querySelectorAll('.hero-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % selectedHeroes.length;
+            goToSlide(currentSlide);
+        }
+        
+        // Initialize Before & After
+        function renderBeforeAfter() {
+            const selected = shuffleArray([...beforeAfterImages]).slice(0, 6);
+            const container = document.getElementById('beforeAfterGallery');
+            
+            container.innerHTML = selected.map((item, index) => {
+                const caption = beforeAfterCaptions[index % beforeAfterCaptions.length];
+                return `
+                    <div class="gallery-item">
+                        <img src="${item.path}" alt="${item.type}">
+                        <div class="gallery-overlay">
+                            <h4>${caption.title}</h4>
+                            <p>${caption.desc}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initialize Doctor Patient Photos
+        function renderDoctorPatientPhotos() {
+            const selected = shuffleArray([...doctorPatientPhotos]).slice(0, 6);
+            const container = document.getElementById('doctorPatientPhotos');
+            
+            container.innerHTML = selected.map((path, index) => {
+                const caption = photoCaptions[index % photoCaptions.length];
+                return `
+                    <div class="photo-item">
+                        <img src="${path}" alt="Patient Photo ${index + 1}">
+                        <div class="photo-caption">
+                            <h4>${caption.title}</h4>
+                            <p>${caption.desc}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initialize Testimonials
+        function renderTestimonials() {
+            const container = document.getElementById('testimonials');
+            container.innerHTML = testimonialsData.map(t => `
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"${t.text}"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">${t.initials}</div>
+                        <div class="testimonial-info">
+                            <h4>${t.name}</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> ${t.country}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Initialize Hospital Gallery
+        function renderHospitalGallery() {
+            const selected = shuffleArray([...hospitalImages]).slice(0, 6);
+            const container = document.getElementById('hospitalGallery');
+            
+            container.innerHTML = selected.map((path, index) => {
+                const caption = hospitalCaptions[index % hospitalCaptions.length];
+                return `
+                    <div class="hospital-item">
+                        <img src="${path}" alt="Hospital ${index + 1}">
+                        <div class="hospital-caption">
+                            <h4>${caption.title}</h4>
+                            <p>${caption.desc}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initialize FAQ
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            container.innerHTML = faqData.map((faq, index) => `
+                <div class="faq-item ${index === 0 ? 'active' : ''}">
+                    <div class="faq-question" onclick="toggleFAQ(${index})">
+                        <span>${faq.q}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        ${faq.a}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function toggleFAQ(index) {
+            const items = document.querySelectorAll('.faq-item');
+            items[index].classList.toggle('active');
+        }
+        
+        // Initialize all
+        renderHero();
+        renderBeforeAfter();
+        renderDoctorPatientPhotos();
+        renderTestimonials();
+        renderHospitalGallery();
+        renderFAQ();
+        
+        // Auto-rotate hero (temporarily disabled)
+        // setInterval(nextSlide, 5000);
+    </script>
+    
+    <script src="/sendemail/form2026.js"></script>
+    <script>
+    window.ZF_FORM_CONFIG = {
+        wechat: "15810155700",
+        qrcode: { enable: false, src: "/images/erweima.jpg" },
+        display: {
+            pcFloat: true,
+            mobileMode: "mini"
+        },
+        wechatRow: {
+            enable: false
+        },
+        language: {
+            enable: true,
+            showSwitch: false,
+            default: "en"
+        }
+    };
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<!-- ========================================
+ reviews - Barley Hair Transplant Hospital
+ Page: reviews.html
+ ======================================== -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Patient Reviews | Barley Hair Transplant Hospital</title>
+ <meta name="description" content="Read real patient reviews and testimonials about hair transplant experiences at Barley Hair Transplant Hospital. See why thousands trust us for their hair restoration.">
+ <meta name="keywords" content="hair transplant reviews, patient testimonials, hair restoration reviews, barley hair transplant reviews">
+ <meta name="robots" content="index, follow">
+ <meta name="author" content="Barley Hair Transplant Hospital">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Patient Reviews | Barley Hair Transplant Hospital">
+ <meta property="og:description" content="Read real patient reviews and testimonials about hair transplant experiences at Barley Hair Transplant Hospital.">
+ <meta property="og:url" content="https://www.barleyhair.com/reviews.html">
+ <meta property="og:site_name" content="Barley Hair Transplant Hospital">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:image" content="https://www.barleyhair.com/Banner/hero-8.jpg">
+<style>
+ /* Reviews Grid - Modern Redesign */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+ gap: 40px;
+ margin-top: 60px;
+ }
+
+ .review-card {
+ background: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%);
+ padding: 45px 40px 35px;
+ border-radius: 20px;
+ box-shadow: 0 10px 30px rgba(30, 80, 162, 0.08);
+ transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+ position: relative;
+ border: 2px solid transparent;
+ overflow: hidden;
+ }
+
+ .review-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.4s ease;
+ }
+
+ .review-card::after {
+ content: '\201C';
+ position: absolute;
+ top: 15px;
+ right: 25px;
+ font-size: 120px;
+ color: var(--primary-blue);
+ opacity: 0.05;
+ font-family: Georgia, serif;
+ line-height: 1;
+ pointer-events: none;
+ }
+
+ .review-card:hover {
+ transform: translateY(-12px);
+ box-shadow: 0 20px 50px rgba(30, 80, 162, 0.15);
+ border-color: var(--accent-gold);
+ }
+
+ .review-card:hover::before {
+ transform: scaleX(1);
+ }
+
+ .review-stars {
+ display: flex;
+ justify-content: center;
+ gap: 6px;
+ margin-bottom: 25px;
+ position: relative;
+ z-index: 1;
+ }
+
+ .review-stars i {
+ font-size: 22px;
+ color: var(--accent-gold);
+ filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.3));
+ transition: transform 0.3s ease;
+ }
+
+ .review-card:hover .review-stars i {
+ transform: scale(1.1);
+ }
+
+ .review-content {
+ font-size: 16px;
+ color: var(--text-gray);
+ line-height: 1.85;
+ margin-bottom: 30px;
+ position: relative;
+ z-index: 1;
+ font-style: italic;
+ text-align: justify;
+ }
+
+ .review-author {
+ font-size: 17px;
+ font-weight: 700;
+ color: var(--primary-blue);
+ text-align: right;
+ padding-top: 20px;
+ border-top: 2px solid var(--soft-gold);
+ position: relative;
+ z-index: 1;
+ }
+
+ .review-author::before {
+ content: '—';
+ margin-right: 8px;
+ color: var(--accent-gold);
+ font-weight: 400;
+ }
+
+ @media (max-width: 480px) {
+ .reviews-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- ============ Header ============ -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <img src="images/logo.png" alt="Barley Hair Transplant Hospital">
+ <span class="logo-text-desktop">Barley Hair Transplant Hospital</span>
+ <span class="logo-text-mobile">Barley Hair Hospital</span>
+ </div>
+ <div class="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+
+ <section class="hero">
+ <div class="hero-slides" id="heroSlides">
+ <div class="hero-slide">
+ <img src="Banner/hero-15.jpg" alt="Barley Hair Transplant Patient Reviews">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Patient Reviews</h2>
+ <p>Real stories from real patients who transformed their lives with Barley</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-21.jpg" alt="Barley Hair Transplant Results">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Trusted by Thousands</h2>
+ <p>Over 100,000 satisfied patients from 50+ countries trust Barley for their hair restoration</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-16.jpg" alt="Barley Hair Transplant Technology">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Natural Looking Results</h2>
+ <p>Our microneedle technology delivers natural, permanent hair restoration with minimal discomfort</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Reviews Section -->
+ <section class="content-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>What Our Patients Say</h2>
+ <div class="gold-divider"></div>
+ <p>Real experiences from real patients who trusted Barley with their hair restoration journey</p>
+ </div>
+ <div class="reviews-grid">
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I was facing severe hair loss and receding hairline for a while and someone recommended I go for a hair transplant procedure. I had no idea what it was and did some research. I decided to consult Barley experts and they were really keen on helping me. I went for a hair transplant procedure with the confidence that I was in good hands. Barley didn't disappoint! Everything went smoothly because from consultation to surgery and post-surgery, they made sure I was prepared and satisfied. Highly recommend Barley as they truly care about their clients and their practice.</p>
+ </div>
+ <div class="review-author">Liam</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I went to Barley for my hair transplant procedure because they are quite renowned in China. Happy to say the best decision ever. My hair started regenerating, and now I look completely different. The results are what I was looking for.</p>
+ </div>
+ <div class="review-author">Hank</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I was worried hair transplant would leave scars or will not yield the kind of results I had in mind. To my surprise, the microneedle procedure subdued any concerns I had. The change is beyond what I expected. Go for a microneedle hair transplant if you want natural-looking hair.</p>
+ </div>
+ <div class="review-author">Jacob</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>The first time I went to Barley for a beard transplant that completely changed my look. I was happy to see the results so I decided to opt for Barley again for a hair transplant. For someone like me with little hair on top of my head and beard, a Microneedle session was the best solution and doctors recommended it. I had a fantastic time both times. I cannot recommend them highly enough. In my opinion, a microneedle method is the best option.</p>
+ </div>
+ <div class="review-author">Steven</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>My hair started to fall from the sides and top of my head and I lost hope of regaining hair. I was not convinced to opt for any available options but Barley's Microneedle procedure appealed to me. I read they could cover a lot of area in a single session and Microneedle resulted in natural-looking hair restoration. With this in mind, I went to Barley and I got it done. The microneedle session was long but worth every second. The doctors were professional, and their team made certain to cover all of the areas I requested, which included more than half of my head. What can I say The microneedle method was the best solution for my hair loss, and I now look much better as a result. It looks so natural and dense, and I haven't noticed any hair loss. Definitely give it a shot.</p>
+ </div>
+ <div class="review-author">Nate Lee</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Needed a fuller brow and cover a scar I had after a small incident. went to Barley and got it covered with simple scar treatment. There is no scar visible and I have nice and dense brows. Best decision ever.</p>
+ </div>
+ <div class="review-author">Bree</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Thumbs up to their team for delicately covering the scar on my head that affected my self-esteem. It feels like I never had it all because doctors covered it so well that it looks natural. Thank you again for your work.</p>
+ </div>
+ <div class="review-author">Matt</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>My eyebrows were non-existent thanks to over plucking. A single procedure changed all that now can flaunt full brows all because of Barley.</p>
+ </div>
+ <div class="review-author">Stephanie</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Overall my experience was great. Thank you Barley for changing my look and giving my confidence back.</p>
+ </div>
+ <div class="review-author">Alex</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Initially, I was not sure if I should travel to China but their name was quite renowned. Booked my consultation and I was sold! It felt like they knew what I wanted and went above and beyond to make sure I was satisfied throughout the process. I would say it was worth traveling to China for a hair procedure simply because they are the best hospital.</p>
+ </div>
+ <div class="review-author">Robert</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Barley completely changed how my beard looks! I had a rather patchy beard that made me look like a kid. A Beard transplant made it possible for me to have a proper beard for once. This transformation is what I was looking for.</p>
+ </div>
+ <div class="review-author">Oscar</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Very professional staff and friendly team, didn't feel any discomfort or unease because they made sure I got what I needed. Good place for hair transplants.</p>
+ </div>
+ <div class="review-author">James</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Great service, nice people, and amazing results. Much recommended.</p>
+ </div>
+ <div class="review-author">Tim</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Recently I had my hair transplant surgery at Barley. Too soon to see the results but the services and staff are top of the mark. Extremely helpful and dedicated people. I enjoyed visiting them. I am sure the end results would be equally great.</p>
+ </div>
+ <div class="review-author">Daniel</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I was looking for a hair transplant practice and stumbled upon Barley, read great reviews, and saw they are a leading hospital in China. So I decided to travel all the way there. It was a treat! Not only was I greeted by very friendly English-speaking staff, but I also got a free pick-and-drop and 3-day accommodation in China. The experience was just extraordinary. I got a new look and also visited China, what else could I ask for</p>
+ </div>
+ <div class="review-author">Malcom</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Extraordinary team, friendly staff, and my overall experience was great. Recommend it to anyone wanting a new hair look.</p>
+ </div>
+ <div class="review-author">Joshua</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Thank you Barley for restoring my hair and providing me with the best possible solution. I am amazed at the results.</p>
+ </div>
+ <div class="review-author">William</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I am a different man after hair transplant surgery. Barley doctors are magicians.</p>
+ </div>
+ <div class="review-author">David</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>I am grateful for the Barley doctors and team that were supportive and professional. The procedure went with ease and the end result is very good. I am delighted to have a new look and dense hair.</p>
+ </div>
+ <div class="review-author">Aron</div>
+ </div>
+ <div class="review-card">
+ <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <div class="review-content">
+ <p>Never thought I would enjoy a hair transplant surgery that much. Visiting Barley was exciting because I got a new look and had the best time visiting the city. Definitely, you should opt for Barley. No one is better than them.</p>
+ </div>
+ <div class="review-author">Charles</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Amazing Transformations -->
+ <section class="content-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>Amazing Transformations</h2>
+ <div class="gold-divider"></div>
+ <p>See the outstanding hair restoration results our patients have achieved</p>
+ </div>
+ <div class="gallery-grid">
+ <div class="gallery-item">
+ <img src="women/women-22.jpg" alt="Female Hair Restoration">
+ <div class="gallery-overlay">
+ <h4>Female Hair Restoration</h4>
+ <p>Beautiful results one year after transplant procedure</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-14.jpg" alt="Male Hairline Transplant">
+ <div class="gallery-overlay">
+ <h4>Hairline Restoration</h4>
+ <p>Perfectly natural hairline achieved with our techniques</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-8.jpg" alt="Female Hair Thickening">
+ <div class="gallery-overlay">
+ <h4>Volume Enhancement</h4>
+ <p>Significant fullness and density improvement accomplished</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-12.jpg" alt="Male Baldness Treatment">
+ <div class="gallery-overlay">
+ <h4>Crown Coverage</h4>
+ <p>Full restoration for extensive balding areas</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-18.jpg" alt="Vertex Hair Transplant">
+ <div class="gallery-overlay">
+ <h4>Vertex Restoration</h4>
+ <p>Outstanding results for back-of-head hair transplantation</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-25.jpg" alt="Male Hair Transplant">
+ <div class="gallery-overlay">
+ <h4>Complete Restoration</h4>
+ <p>Remarkable hair transformation journey</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Satisfied Patients -->
+ <section class="content-section patient-photos">
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Satisfied Patients</h2>
+ <div class="gold-divider"></div>
+ <p>Authentic moments with our happy, successful patients</p>
+ </div>
+ <div class="photos-grid">
+ <div class="photo-item">
+ <img src="Photos/Photos-12.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Delighted Patient</h4>
+ <p>Celebrating their amazing results with our care team</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-42.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Wonderful Transformation</h4>
+ <p>Patient proudly showing off their fantastic new hairline</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-28.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Confidence Reborn</h4>
+ <p>Joyful patient sharing their fantastic experience</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-51.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Incredible Outcome</h4>
+ <p>Patient celebrating with our expert medical team</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-33.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>New Beginning</h4>
+ <p>Thankful patient following their successful transplant</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-62.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Fresh Look, Fresh Start</h4>
+ <p>Thrilled patient showcasing their hair restoration results</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-18.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Transformative Journey</h4>
+ <p>Patient overjoyed with their transformation results</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-48.jpg" alt="Happy Hair Transplant Patient - Barley Hospital">
+ <div class="photo-caption">
+ <h4>Perfectly Natural Results</h4>
+ <p>Happy patient eager to begin their new chapter</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Patient Testimonials -->
+ <section class="content-section testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>Patient Testimonials</h2>
+ <div class="gold-divider"></div>
+ <p>Genuine stories from our grateful patients around the world</p>
+ </div>
+ <div class="testimonials-grid">
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I was nervous about traveling to China for a hair transplant, but Barley made the entire journey effortless. From the airport pickup to the post-op follow-ups, everything was meticulously organized. Six months in, my hairline looks completely natural — my own family barely noticed the change!"</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">JA</div>
+ <div class="testimonial-info">
+ <h4>James Anderson</h4>
+ <p><i class="fas fa-map-marker-alt"></i> United States</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"After losing my confidence for over a decade, I finally decided to take the plunge. The consultation video call put all my worries to rest — the surgeon explained everything clearly and gave me realistic expectations. Now I'm nine months post-op and I honestly can't stop smiling every time I look in the mirror."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">EW</div>
+ <div class="testimonial-info">
+ <h4>Emma Williams</h4>
+ <p><i class="fas fa-map-marker-alt"></i> United Kingdom</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"The value for money is absolutely incredible. Back in Sydney, I was quoted nearly triple the price for a similar procedure. At Barley, the quality exceeded what I expected at any price point. The clinic was spotless, the staff incredibly warm, and my results speak for themselves."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">LM</div>
+ <div class="testimonial-info">
+ <h4>Liam Mitchell</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Australia</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"As someone who researched clinics for nearly two years, I can say Barley stands above the rest. The 30+ clinic network across China gives you confidence in their scale and reputation. My coordinator spoke perfect English and was available on WhatsApp at all hours. Truly world-class service."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">YS</div>
+ <div class="testimonial-info">
+ <h4>Yuki Sato</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Japan</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I had my procedure done at the Shanghai clinic and the experience was seamless. The hotel they arranged was just a ten-minute walk away, the driver picked me up right on time, and the medical team made me feel completely comfortable throughout. Recovery was much faster than I anticipated."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">FK</div>
+ <div class="testimonial-info">
+ <h4>Fatima Khan</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Pakistan</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"My wife actually found Barley online and encouraged me to book a consultation. Best decision I ever made. The entire team treated me like family, the procedure day was surprisingly relaxing, and a year later the grafts have grown in beautifully. I feel like myself again."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">MS</div>
+ <div class="testimonial-info">
+ <h4>Marcus Schmidt</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Germany</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Clinic Environment -->
+ <section class="content-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Clinic Environment</h2>
+ <div class="gold-divider"></div>
+ <p>Experience our modern and comfortable facilities</p>
+ </div>
+ <div class="hospital-grid">
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-73.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Modern Clinic</h4>
+ <p>Our state-of-the-art facility</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-48.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Comfortable Waiting Area</h4>
+ <p>Relax in our premium lounge</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-65.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Operating Room</h4>
+ <p>Sterile and advanced</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-28.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Consultation Room</h4>
+ <p>Private and professional</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-22.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Recovery Area</h4>
+ <p>Comfortable post-op space</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-15.jpg" alt="Barley Hair Transplant Clinic Environment">
+ <div class="hospital-caption">
+ <h4>Reception</h4>
+ <p>Welcoming entrance</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- International Patient FAQ -->
+ <section class="content-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>International Patient FAQ</h2>
+ <div class="gold-divider"></div>
+ <p>Everything you need to know before your hair transplant journey to China</p>
+ </div>
+ <div class="faqContainer">
+ <div class="faq-item active">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What visa do I need to get a hair transplant in China</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Most international patients enter China on a standard tourist visa (L visa). We provide an official invitation letter that you can submit with your visa application at the nearest Chinese embassy or consulate. Some nationalities are eligible for visa-free transit (up to 144 hours) if you're connecting through certain Chinese cities, which may cover your procedure. Our patient coordinators will guide you through the visa process and recommend the best option based on your nationality and travel plans.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How much can I save by getting a hair transplant in China</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Hair transplant costs in China are typically 50-70% lower than in the United States, United Kingdom, Australia, or Western Europe. A procedure that might cost 10,000-15,000 USD in the US often ranges from 2,500-5,000 USD at our clinics. This significant savings includes the procedure itself, post-operative medications, and follow-up care— — delivered with the same or higher quality standards you'd expect at home.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How long should I stay in China for my hair transplant</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ We recommend planning a 5-7 day trip for your procedure. Day 1 is reserved for an in-person consultation, scalp analysis, and pre-operative testing. Day 2 is typically your procedure day. Days 3-5 allow for initial recovery, post-op check-ups, and gentle cleaning of the transplanted area. If you'd like to explore China or combine your trip with tourism, we can help plan a safe sightseeing itinerary that won't interfere with your healing.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Do you arrange airport pickup and hotel accommodation</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes, we provide complimentary airport pickup for all international patients. An English-speaking driver will greet you at arrivals with a personalized sign. We've also partnered with several premium hotels within walking distance of our clinics, offering discounted rates exclusively for our patients. Our team can handle your hotel booking, arrange transportation to and from the clinic, and ensure your entire stay is comfortable and stress-free.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Will language be a barrier during my treatment</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Not at all. From the moment you contact us, you'll be assigned a dedicated English-speaking patient coordinator who will assist you throughout your entire journey. All consent forms, medical documents, and post-operative care instructions are provided in professional English. Many of our surgeons and nursing staff are fluent in English as well, so you'll never feel misunderstood or left out during consultations, procedures, or follow-ups.
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Contact Section -->
+ <section class="contact" id="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Contact Us</h2>
+ <div class="gold-divider"></div>
+ <p>Click to copy contact information</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+ <i class="fab fa-weixin"></i>
+ <h4>WeChat</h4>
+ <p>15810155700</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+ <i class="fab fa-whatsapp"></i>
+ <h4>WhatsApp</h4>
+ <p>+86 13730143529</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+ <i class="fas fa-envelope"></i>
+ <h4>Email</h4>
+ <p>hairtransplant@qq.com</p>
+ </div>
+ <div class="contact-item qrcode-card">
+ <img src="images/erweima.jpg" alt="WeChat QR Code">
+ </div>
+ </div>
+ 
+ <!-- Three Column Layout: Form | Info | Image -->
+ <div class="contact-three-column">
+ <div class="contact-form-column">
+ <form id="contactForm" class="contact-form" novalidate>
+ <h3>Get Free Consultation</h3>
+ <div class="form-group">
+ <input type="text" id="contactName" name="nickname" placeholder="Your Name *" required>
+ </div>
+ <div class="form-group">
+ <input type="text" id="contactPhone" name="contact" placeholder="Phone/WeChat/WhatsApp *" required>
+ </div>
+ <div class="form-group">
+ <select id="contactProject" name="project" title="Please select a service">
+ <option value="">Select Service *</option>
+ <option value="发际线种植">Hairline Transplant</option>
+ <option value="头发加密">Hair Thickening</option>
+ <option value="秃顶植发">Baldness Restoration</option>
+ <option value="眉毛种植">Eyebrow Transplant</option>
+ <option value="胡须种植">Beard Transplant</option>
+ <option value="鬓角种植">Sideburns Transplant</option>
+ <option value="体毛种植">Body Hair Transplant</option>
+ <option value="脱发治疗">Hair Loss Treatment</option>
+ <option value="头发养护">Hair Care</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <textarea id="contactMessage" name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+ </div>
+ <button type="button" id="contactSubmitBtn" class="btn btn-primary">Send Message</button>
+ </form>
+ 
+ <div class="about-barley-card">
+ <h4>About Barley</h4>
+ <p>Established by a team of doctors with 31 branches in China's major cities, Barley Microneedle Hair Transplant Hospital has always been pursuing the best technology, better quality and more safety to help you with all kinds of hair loss problems.</p>
+ </div>
+ </div>
+ 
+ <div class="contact-info-column">
+ <div class="contact-info-top">
+ <h3>You Might Also Want to Know</h3>
+ <p>Everyone's hair loss journey and solution are unique due to a variety of factors. Our hair restoration experts will assist you in determining the root cause and the best solution for your hair restoration plan. If you have any questions, please ask; we are happy to assist.</p>
+ </div>
+ <div class="contact-info-bottom">
+ <img src="images/test.jpg" alt="Hair Transplant Consultation">
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="hairline-transplant.html">Hairline Transplant</a></li>
+ <li><a href="hair-thickening.html">Hair Thickening</a></li>
+ <li><a href="baldness-restoration.html">Baldness Restoration</a></li>
+ <li><a href="eyebrow-transplant.html">Eyebrow Transplant</a></li>
+ <li><a href="beard-transplant.html">Beard Transplant</a></li>
+ <li><a href="body-hair-transplant.html">Body Hair Transplant</a></li>
+ <li><a href="scar-hair-transplant.html">Scar Hair Transplant</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Loss Education</h4>
+ <ul>
+ <li><a href="hair-loss-treatment.html">Hair Loss Treatment</a></li>
+ <li><a href="hair-care.html">Hair Care</a></li>
+ <li><a href="minoxidil.html">Minoxidil</a></li>
+ <li><a href="finasteride.html">Finasteride</a></li>
+ <li><a href="male-hair-loss-guide.html">Male Hair Loss Guide</a></li>
+ <li><a href="female-hair-loss-guide.html">Female Hair Loss Guide</a></li>
+ <li><a href="is-hair-loss-genetic.html">Is Hair Loss Genetic</a></li>
+ <li><a href="does-daily-hair-loss-lead-to-balding.html">Daily Hair Loss vs Balding</a></li>
+ <li><a href="hair-loss-calculator.html">Hair Loss Calculator</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Transplant Education</h4>
+ <ul>
+ <li><a href="hair-transplant-cost.html">Hair Transplant Cost</a></li>
+ <li><a href="fue-hair-transplant.html">FUE Hair Transplant</a></li>
+ <li><a href="fut-hair-transplant.html">FUT Hair Transplant</a></li>
+ <li><a href="no-shave-hair-transplant.html">No-Shave Hair Transplant</a></li>
+ <li><a href="hair-transplant-process.html">Hair Transplant Process</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="reviews.html">Patient Reviews</a></li>
+ <li><a href="travel-to-china.html">Travel to China</a></li>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copyright">
+ <p>&copy; 2006-2026 Barley Hair Transplant Hospital. All rights reserved.</p>
+ <p class="footer-details">Leader in innovative microneedle hair restoration | 30+ clinic locations across China</p>
+ <p class="footer-disclaimer">Disclaimer: The information on this website is for educational purposes only and does not constitute medical advice. Please consult with a qualified healthcare professional for personalized treatment recommendations.</p>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Back to Top -->
+ <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/main.js"></script>
+ <script>
+ window.ZF_FORM_CONFIG = {
+ wechat: "15810155700",
+ qrcode: { enable: false, src: "/images/erweima.jpg" },
+ display: {
+ pcFloat: true,
+ mobileMode: 'mini'
+ },
+ wechatRow: {
+ enable: false
+ },
+ language: {
+ enable: true,
+ showSwitch: false,
+ default: "en"
+ }
+ };
+ </script>
+ <script src="/sendemail/form2026.js"></script>
+</body>
+</html>

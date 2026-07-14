@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<!-- ========================================
+ hair-loss-calculator - Barley Hair Transplant Hospital
+ Page: hair-loss-calculator.html
+ ======================================== -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hair Loss Calculator | Barley Hair Transplant Hospital</title>
+ <meta name="description" content="Use our interactive hair loss assessment tool to evaluate your hair loss level and get personalized treatment recommendations from Barley Hair Transplant Hospital.">
+ <meta name="keywords" content="hair loss calculator, hair loss assessment, baldness test, hair loss test">
+ <meta name="author" content="Barley Hair Transplant Hospital">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+ <meta property="og:title" content="Hair Loss Calculator | Barley Hair Transplant Hospital">
+ <meta property="og:description" content="Use our interactive hair loss assessment tool to evaluate your hair loss level and get personalized treatment recommendations.">
+ <meta property="og:url" content="https://www.barleyhair.com/hair-loss-calculator.html">
+ <meta property="og:site_name" content="Barley Hair Transplant Hospital">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:image" content="https://www.barleyhair.com/Banner/hero-7.jpg">
+<style>
+ .calculator-section { padding: 60px 0; background: #fff; }
+ .calculator-form-wrap { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow-md); }
+ .calc-progress { margin-bottom: 30px; text-align: center; }
+ .calc-progress-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: 10px; overflow: hidden; }
+ .calc-progress-bar .fill { height: 100%; background: var(--gradient-primary); transition: width 0.3s ease; }
+ .calc-step { display: none; }
+ .calc-step.active { display: block; }
+ .calc-step h2 { color: var(--primary-blue) !important; margin-bottom: 20px; font-size: 24px; }
+ .calc-progress { margin-bottom: 30px; text-align: center; color: var(--primary-blue); font-size: 16px; font-weight: 600; }
+ .calc-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; }
+ .calc-options label { display: flex; align-items: center; padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+ .calc-options label:hover { border-color: var(--primary-blue); background: var(--soft-blue); }
+ .calc-options input[type="radio"], .calc-options input[type="checkbox"] { margin-right: 10px; width: 20px; height: 20px; }
+ .calc-options input:checked + span { color: var(--primary-blue); font-weight: 600; }
+ .age-input { width: 100%; padding: 15px; font-size: 18px; border: 2px solid #e0e0e0; border-radius: 8px; margin: 20px 0; }
+ .age-input:focus { outline: none; border-color: var(--primary-blue); }
+ .calc-nav { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
+ .btn-outline { background: white; color: var(--primary-blue); border: 2px solid var(--primary-blue); }
+ .btn-outline:hover { background: var(--soft-blue); }
+ .calc-result { text-align: center; padding: 40px 20px; }
+ .calc-result h2 { color: var(--primary-blue); font-size: 28px; margin-bottom: 20px; }
+ .calc-result .result-level { font-size: 36px; font-weight: 700; color: var(--accent-cyan); margin: 20px 0; }
+ .calc-result p { font-size: 16px; line-height: 1.8; color: var(--text-gray); margin-bottom: 15px; }
+
+ /* Calculator styles from style.css */
+ .calculator-container {
+ max-width: 800px;
+ margin: 0 auto;
+ background: var(--white);
+ padding: 40px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-md);
+ }
+
+ .question-block {
+ margin-bottom: 30px;
+ }
+
+ .question-block h3 {
+ font-size: 20px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+ }
+
+ .option-btn {
+ display: block;
+ width: 100%;
+ padding: 15px 20px;
+ margin-bottom: 10px;
+ background: var(--soft-blue);
+ border: 2px solid transparent;
+ border-radius: 6px;
+ text-align: left;
+ font-size: 16px;
+ color: var(--text-dark);
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+
+ .option-btn:hover {
+ background: var(--white);
+ border-color: var(--accent-gold);
+ }
+
+ .option-btn.selected {
+ background: var(--primary-blue);
+ color: var(--white);
+ border-color: var(--primary-blue);
+ }
+
+ .progress-bar {
+ width: 100%;
+ height: 8px;
+ background: var(--soft-blue);
+ border-radius: 4px;
+ overflow: hidden;
+ margin: 30px 0;
+ }
+
+ .progress-fill {
+ height: 100%;
+ background: var(--accent-gold);
+ transition: width 0.3s ease;
+ }
+
+ .result-block {
+ text-align: center;
+ padding: 30px;
+ background: var(--soft-gold);
+ border-radius: 8px;
+ margin-top: 30px;
+ }
+
+ .result-block h3 {
+ font-size: 24px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+ }
+
+ .result-block p {
+ font-size: 16px;
+ color: var(--text-gray);
+ margin-bottom: 20px;
+ }
+
+ /* Get Results Button - Enhanced */
+ .btn-get-results {
+ display: inline-block;
+ padding: 20px 60px;
+ font-size: 22px;
+ font-weight: 700;
+ color: var(--white);
+ background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+ border: none;
+ border-radius: 12px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ box-shadow: 0 8px 20px rgba(30, 80, 162, 0.3);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .btn-get-results::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+ transition: left 0.5s ease;
+ }
+
+ .btn-get-results:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 12px 30px rgba(30, 80, 162, 0.4);
+ }
+
+ .btn-get-results:hover::before {
+ left: 100%;
+ }
+
+ .btn-get-results i {
+ margin-left: 10px;
+ font-size: 24px;
+ }
+
+ /* Result Display Enhancement */
+ .calc-result {
+ text-align: center;
+ padding: 50px 30px;
+ background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+ border-radius: 16px;
+ box-shadow: 0 10px 40px rgba(30, 80, 162, 0.1);
+ margin-top: 30px;
+ }
+
+ .calc-result h2 {
+ color: var(--primary-blue);
+ font-size: 32px;
+ margin-bottom: 20px;
+ font-weight: 700;
+ }
+
+ .calc-result .result-level {
+ font-size: 42px;
+ font-weight: 700;
+ color: var(--accent-gold);
+ margin: 25px 0;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .calc-result p {
+ font-size: 18px;
+ line-height: 1.8;
+ color: var(--text-gray);
+ margin-bottom: 20px;
+ }
+
+ .result-section {
+ background: var(--white);
+ padding: 30px;
+ border-radius: 12px;
+ margin: 25px 0;
+ box-shadow: 0 4px 16px rgba(30, 80, 162, 0.08);
+ }
+
+ .result-section h3 {
+ color: var(--primary-blue);
+ font-size: 24px;
+ margin-bottom: 20px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+
+ .result-section h3 i {
+ color: var(--accent-gold);
+ font-size: 28px;
+ }
+
+ .result-section ul {
+ list-style: none;
+ padding: 0;
+ text-align: left;
+ }
+
+ .result-section ul li {
+ padding: 12px 0;
+ padding-left: 35px;
+ position: relative;
+ font-size: 16px;
+ color: var(--text-gray);
+ line-height: 1.6;
+ border-bottom: 1px solid rgba(30, 80, 162, 0.08);
+ }
+
+ .result-section ul li:last-child {
+ border-bottom: none;
+ }
+
+ .result-section ul li::before {
+ content: '\f00c';
+ font-family: 'Font Awesome 6 Free';
+ font-weight: 900;
+ position: absolute;
+ left: 0;
+ color: var(--accent-gold);
+ font-size: 16px;
+ }
+
+ .result-section.treatment ul li::before {
+ content: '\f0f0';
+ color: var(--primary-blue);
+ }
+
+ .result-section.care ul li::before {
+ content: '\f004';
+ color: #e74c3c;
+ }
+ </style>
+</head>
+<body>
+ <!-- ============ Header ============ -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <img src="images/logo.png" alt="Barley Hair Transplant Hospital">
+ <span class="logo-text-desktop">Barley Hair Transplant Hospital</span>
+ <span class="logo-text-mobile">Barley Hair Hospital</span>
+ </div>
+ <div class="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+
+ <!-- ============ Hero Section ============ -->
+ <section class="hero">
+ <div class="hero-slides" id="heroSlides">
+ <div class="hero-slide">
+ <img src="Banner/hero-1.jpg" alt="Hair loss assessment tool">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h1>Hair Loss Calculator</h1>
+ <p>Assess your hair loss level and get personalized treatment recommendations</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-8.jpg" alt="Professional hair analysis">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Expert Hair Analysis</h2>
+ <p>Our advanced assessment tool helps identify the cause and stage of your hair loss</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-18.jpg" alt="Personalized treatment plan">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Personalized Solutions</h2>
+ <p>Based on your results, our experts will create a tailored restoration plan</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Page Banner -->
+ <section class="page-banner" style="background: #fff; padding: 60px 0;">
+ <div class="container">
+ <h1 style="color: var(--primary-blue) !important;">Take the Hair Loss Test</h1>
+ <p style="color: var(--text-gray) !important; opacity: 1;">Answer 11 quick questions to understand your hair loss condition</p>
+ <a href="contact.html" class="btn-get-results" style="display: inline-block; padding: 16px 40px; font-size: 18px; text-decoration: none;">Schedule Free Consultation <i class="fas fa-arrow-right"></i></a>
+ </div>
+ </section>
+
+ <!-- Calculator Section -->
+ <section class="calculator-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>Online Hair Loss Diagnosis</h2>
+ <div class="gold-divider"></div>
+ <p>Professional assessment based on your personal information</p>
+ </div>
+ <div class="calculator-form-wrap">
+ <div class="calc-progress">
+ <span>Step <span class="current-step">1</span> of 11</span>
+ <div class="calc-progress-bar"><div class="fill" style="width:9%"></div></div>
+ </div>
+ <form id="hair-loss-calculator" class="calculator-form">
+ <!-- Step 1: Age -->
+ <div class="calc-step active" data-step="1">
+ <h2>Age</h2>
+ <input type="number" class="age-input" id="calc-age" placeholder="34" min="1" max="120" required/>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-primary btn-next" data-next="2">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 2: Gender -->
+ <div class="calc-step" data-step="2">
+ <h2>Gender</h2>
+ <div class="calc-options">
+ <label><input type="radio" name="gender" value="Male" required/> <span>Male</span></label>
+ <label><input type="radio" name="gender" value="Female"/> <span>Female</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="1"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="3">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 3: Hair strands lost per day -->
+ <div class="calc-step" data-step="3">
+ <h2>Approximately, how many hair strands do you lose in a day</h2>
+ <div class="calc-options">
+ <label><input type="radio" name="hair_loss_daily" value="0 - 100" required/> <span>0 - 100</span></label>
+ <label><input type="radio" name="hair_loss_daily" value="100-150"/> <span>100 - 150</span></label>
+ <label><input type="radio" name="hair_loss_daily" value="150-200"/> <span>150 - 200</span></label>
+ <label><input type="radio" name="hair_loss_daily" value="Over 200"/> <span>Over 200</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="2"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="4">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 4: Symptoms -->
+ <div class="calc-step" data-step="4">
+ <h2>How many of the following symptoms do you relate to</h2>
+ <div class="calc-options">
+ <label><input type="checkbox" name="symptoms[]" value="Dandruff"/> <span>Dandruff</span></label>
+ <label><input type="checkbox" name="symptoms[]" value="Itchy Scalp"/> <span>Itchy Scalp</span></label>
+ <label><input type="checkbox" name="symptoms[]" value="Low Hair Volume"/> <span>Low Hair Volume</span></label>
+ <label><input type="checkbox" name="symptoms[]" value="Receding Hairline"/> <span>Receding Hairline</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="3"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="5">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 5: Lifestyle habits -->
+ <div class="calc-step" data-step="5">
+ <h2>Which of the following lifestyle habits do you have</h2>
+ <div class="calc-options">
+ <label><input type="checkbox" name="lifestyle[]" value="Smoking"/> <span>Smoking</span></label>
+ <label><input type="checkbox" name="lifestyle[]" value="Stress"/> <span>Stress</span></label>
+ <label><input type="checkbox" name="lifestyle[]" value="Exercise"/> <span>Exercise</span></label>
+ <label><input type="checkbox" name="lifestyle[]" value="None Of The Above"/> <span>None Of The Above</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="4"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="6">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 6: Medical conditions -->
+ <div class="calc-step" data-step="6">
+ <h2>Select all the medical conditions that apply:</h2>
+ <div class="calc-options">
+ <label><input type="checkbox" name="medical[]" value="Diabetes"/> <span>Diabetes</span></label>
+ <label><input type="checkbox" name="medical[]" value="Thyroid"/> <span>Thyroid</span></label>
+ <label><input type="checkbox" name="medical[]" value="Scalp Ringworm"/> <span>Scalp Ringworm</span></label>
+ <label><input type="checkbox" name="medical[]" value="None Of The Above"/> <span>None Of The Above</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="5"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="7">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 7: Current treatment -->
+ <div class="calc-step" data-step="7">
+ <h2>Are you currently undergoing any of these treatments</h2>
+ <div class="calc-options">
+ <label><input type="checkbox" name="treatment[]" value="Chemotherapy"/> <span>Chemotherapy</span></label>
+ <label><input type="checkbox" name="treatment[]" value="Radiation"/> <span>Radiation</span></label>
+ <label><input type="checkbox" name="treatment[]" value="None"/> <span>None</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="6"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="8">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 8: Beauty activities -->
+ <div class="calc-step" data-step="8">
+ <h2>Do you regularly engage in any of these beauty activities</h2>
+ <div class="calc-options">
+ <label><input type="checkbox" name="beauty[]" value="Hair Coloring"/> <span>Hair Coloring</span></label>
+ <label><input type="checkbox" name="beauty[]" value="Perming"/> <span>Perming</span></label>
+ <label><input type="checkbox" name="beauty[]" value="Heat Styling"/> <span>Heat Styling</span></label>
+ <label><input type="checkbox" name="beauty[]" value="None"/> <span>None</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="7"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="9">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 9: Diet -->
+ <div class="calc-step" data-step="9">
+ <h2>How would you describe your diet</h2>
+ <div class="calc-options">
+ <label><input type="radio" name="diet" value="Balanced" required/> <span>Balanced</span></label>
+ <label><input type="radio" name="diet" value="Moderate"/> <span>Moderate</span></label>
+ <label><input type="radio" name="diet" value="Poor"/> <span>Poor</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="8"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="10">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 10: Family history -->
+ <div class="calc-step" data-step="10">
+ <h2>Do you have a family history of hair loss</h2>
+ <div class="calc-options">
+ <label><input type="radio" name="family_history" value="Yes" required/> <span>Yes</span></label>
+ <label><input type="radio" name="family_history" value="No"/> <span>No</span></label>
+ <label><input type="radio" name="family_history" value="Not Sure"/> <span>Not Sure</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="9"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn btn-primary btn-next" data-next="11">Next <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ <!-- Step 11: Duration -->
+ <div class="calc-step" data-step="11">
+ <h2>How long have you been experiencing hair loss</h2>
+ <div class="calc-options">
+ <label><input type="radio" name="duration" value="Less than 1 year" required/> <span>Less than 1 year</span></label>
+ <label><input type="radio" name="duration" value="1-3 years"/> <span>1-3 years</span></label>
+ <label><input type="radio" name="duration" value="3-5 years"/> <span>3-5 years</span></label>
+ <label><input type="radio" name="duration" value="More than 5 years"/> <span>More than 5 years</span></label>
+ </div>
+ <div class="calc-nav">
+ <button type="button" class="btn btn-outline btn-prev" data-prev="10"><i class="fas fa-arrow-left"></i> Previous</button>
+ <button type="button" class="btn-get-results" id="getResultsBtn">GET RESULTS <i class="fas fa-arrow-right"></i></button>
+ </div>
+ </div>
+ </form>
+ <!-- Result -->
+ <div class="calc-result" id="calc-result" style="display:none;">
+ <h2>Your Hair Loss Assessment</h2>
+ <div class="result-level" id="result-level"></div>
+ <p id="result-description"></p>
+ <div id="treatment-plan"></div>
+ <div id="care-tips"></div>
+ 
+ <!-- Contact Information -->
+ <div style="margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); border-radius: 12px; box-shadow: 0 4px 16px rgba(30, 80, 162, 0.08);">
+ <h3 style="color: var(--primary-blue); font-size: 24px; margin-bottom: 20px; text-align: center;">Ready to Take Action Contact Us Today!</h3>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 25px;">
+ <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+ <i class="fab fa-weixin" style="font-size: 32px; color: #07c160; margin-bottom: 10px;"></i>
+ <h4 style="color: var(--primary-blue); margin-bottom: 8px;">WeChat</h4>
+ <p style="color: var(--text-gray); font-weight: 600;">15810155700</p>
+ </div>
+ <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+ <i class="fab fa-whatsapp" style="font-size: 32px; color: #25d366; margin-bottom: 10px;"></i>
+ <h4 style="color: var(--primary-blue); margin-bottom: 8px;">WhatsApp</h4>
+ <p style="color: var(--text-gray); font-weight: 600;">+86 13730143529</p>
+ </div>
+ <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+ <i class="fas fa-envelope" style="font-size: 32px; color: var(--primary-blue); margin-bottom: 10px;"></i>
+ <h4 style="color: var(--primary-blue); margin-bottom: 8px;">Email</h4>
+ <p style="color: var(--text-gray); font-weight: 600;">hairtransplant@qq.com</p>
+ </div>
+ </div>
+ <div style="text-align: center; margin-top: 30px;">
+ <a href="contact.html" class="btn-get-results" style="display: inline-block; text-decoration: none;">Schedule Free Consultation <i class="fas fa-arrow-right"></i></a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Contact Section -->
+ <section class="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Need Professional Advice</h2>
+ <div class="gold-divider"></div>
+ <p>Contact our experts for a personalized treatment plan</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+ <i class="fab fa-weixin"></i>
+ <h4>WeChat</h4>
+ <p>15810155700</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+ <i class="fab fa-whatsapp"></i>
+ <h4>WhatsApp</h4>
+ <p>+86 13730143529</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+ <i class="fas fa-envelope"></i>
+ <h4>Email</h4>
+ <p>hairtransplant@qq.com</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Before & After Gallery -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Amazing Transformations</h2>
+ <div class="gold-divider"></div>
+ <p>See the results that have earned our patients' lasting confidence</p>
+ </div>
+ <div class="gallery-grid" id="beforeAfterGallery">
+ <div class="gallery-item">
+ <img src="manBald/manBald-12.jpg" alt="Hair loss treatment before and after">
+ <div class="gallery-overlay"><h4>Hairline Reconstruction</h4><p>Natural-looking hairline with ideal density</p></div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-33.jpg" alt="Hair restoration results">
+ <div class="gallery-overlay"><h4>Advanced Hair Loss Recovery</h4><p>Full coverage restoration for significant baldness</p></div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-15.jpg" alt="Women's hair restoration">
+ <div class="gallery-overlay"><h4>Female Hairline Refinement</h4><p>Subtle density boost for female pattern thinning</p></div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-26.jpg" alt="Crown restoration">
+ <div class="gallery-overlay"><h4>Crown Density Restoration</h4><p>Expert thickening for a naturally fuller crown</p></div>
+ </div>
+ <div class="gallery-item">
+ <img src="Eyebrow/Eyebrow-2.jpg" alt="Eyebrow restoration">
+ <div class="gallery-overlay"><h4>Eyebrow Reconstruction</h4><p>Perfectly shaped, naturally full eyebrows</p></div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-5.jpg" alt="Density enhancement">
+ <div class="gallery-overlay"><h4>Overall Density Enhancement</h4><p>Expert thickening for a naturally fuller look</p></div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Satisfied Patients -->
+ <section class="technology">
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Satisfied Patients</h2>
+ <div class="gold-divider"></div>
+ <p>Real patients, real confidence restored</p>
+ </div>
+ <div class="photos-grid" id="doctorPatientPhotos">
+ <div class="photo-item"><img src="Photos/Photos-8.jpg" alt="Satisfied patient"><div class="photo-caption"><h4>Thrilled with Results</h4><p>Patient proudly showing their natural-looking outcome</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-41.jpg" alt="Patient journey"><div class="photo-caption"><h4>Transformation Complete</h4><p>Patient celebrating their remarkable new look</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-58.jpg" alt="Happy patient"><div class="photo-caption"><h4>Newfound Confidence</h4><p>Patient showcasing their refreshed, natural hairline</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-17.jpg" alt="Success story"><div class="photo-caption"><h4>Dramatic Change</h4><p>Patient revealing their impressive transformation</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-32.jpg" alt="International patient"><div class="photo-caption"><h4>Trusted by International Patients</h4><p>Overseas visitor delighted with results</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-62.jpg" alt="Patient testimonial"><div class="photo-caption"><h4>Outstanding Results</h4><p>Patient thrilled with their beautiful new hair</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-25.jpg" alt="Patient story"><div class="photo-caption"><h4>Wonderful Experience</h4><p>Satisfied patient with our medical team</p></div></div>
+ <div class="photo-item"><img src="Photos/Photos-49.jpg" alt="Patient outcome"><div class="photo-caption"><h4>Impressive Transformation</h4><p>Patient demonstrating their successful restoration</p></div></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Patient Testimonials -->
+ <section class="testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>Patient Testimonials</h2>
+ <div class="gold-divider"></div>
+ <p>Real stories from real patients who chose Barley</p>
+ </div>
+ <div class="testimonials-grid" id="testimonials">
+ <div class="testimonial-card">
+ <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <p class="testimonial-text">"The hair loss calculator on Barley's website helped me understand my situation. After getting the assessment, I scheduled a consultation and the results exceeded my expectations. My hairline looks completely natural."</p>
+ <div class="testimonial-author"><div class="testimonial-avatar">JM</div><div class="testimonial-info"><h4>James M.</h4><p><i class="fas fa-map-marker-alt"></i> United Kingdom</p></div></div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <p class="testimonial-text">"I was worried about my thinning hair. The calculator gave me a clear picture, and Barley's team provided a personalized treatment plan. Six months later, the density has improved dramatically. Highly recommend their service."</p>
+ <div class="testimonial-author"><div class="testimonial-avatar">SK</div><div class="testimonial-info"><h4>Sarah K.</h4><p><i class="fas fa-map-marker-alt"></i> Australia</p></div></div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+ <p class="testimonial-text">"From the online assessment to the final result, Barley's team was professional and caring. The microneedle technology they use is incredible — minimal discomfort and fast recovery. My hair looks thick and natural."</p>
+ <div class="testimonial-author"><div class="testimonial-avatar">RL</div><div class="testimonial-info"><h4>Robert L.</h4><p><i class="fas fa-map-marker-alt"></i> Canada</p></div></div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Clinic Environment -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Clinic Environment</h2>
+ <div class="gold-divider"></div>
+ <p>Modern, comfortable clinics designed to put you at ease</p>
+ </div>
+ <div class="hospital-grid" id="hospitalGallery">
+ <div class="hospital-item"><img src="Hospital/Hospital-13.jpg" alt="Clinic facility"><div class="hospital-caption"><h4>State-of-the-Art Clinic</h4><p>Equipped with the latest technology</p></div></div>
+ <div class="hospital-item"><img src="Hospital/Hospital-25.jpg" alt="Waiting area"><div class="hospital-caption"><h4>Premium Lounge</h4><p>Relax in our comfortable waiting area</p></div></div>
+ <div class="hospital-item"><img src="Hospital/Hospital-42.jpg" alt="Operating room"><div class="hospital-caption"><h4>Advanced Operating Suite</h4><p>Certified sterile environment</p></div></div>
+ <div class="hospital-item"><img src="Hospital/Hospital-55.jpg" alt="Consultation room"><div class="hospital-caption"><h4>Private Consultation Space</h4><p>Confidential and professional discussions</p></div></div>
+ <div class="hospital-item"><img src="Hospital/Hospital-66.jpg" alt="Recovery area"><div class="hospital-caption"><h4>Comfortable Recovery Zone</h4><p>Relaxing space for post-procedure rest</p></div></div>
+ <div class="hospital-item"><img src="Hospital/Hospital-73.jpg" alt="Reception"><div class="hospital-caption"><h4>Elegant Reception</h4><p>Warm welcome from our team</p></div></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- FAQ -->
+ <section id="faq">
+ <div class="container">
+ <div class="section-title">
+ <h2>Frequently Asked Questions</h2>
+ <div class="gold-divider"></div>
+ <p>Honest answers to the questions patients ask most</p>
+ </div>
+ <div id="faqContainer">
+ <div class="faq-item active">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>How accurate is the hair loss calculator</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">Our calculator provides a general assessment based on your responses. For a precise diagnosis, we recommend scheduling a free consultation where our specialists can examine your scalp using advanced diagnostic tools and provide personalized recommendations.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>What are the common causes of hair loss</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">Hair loss can be caused by genetics (androgenetic alopecia), hormonal changes, medical conditions, medications, stress, nutritional deficiencies, and aging. The most common cause is genetic pattern baldness, which affects both men and women. Our specialists can identify the specific cause during your consultation.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>When should I seek treatment for hair loss</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">It's best to seek treatment as early as possible. Early intervention can slow down hair loss progression and preserve more of your existing hair. If you notice significant thinning, receding hairline, or excessive shedding (more than 100 hairs per day), we recommend scheduling a consultation.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>What treatment options are available</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">Treatment options include hair transplant surgery (FUE, FUT, microneedle), medical treatments (minoxidil, finasteride), PRP therapy, and hair care maintenance. The best approach depends on your hair loss stage, goals, and overall health. Our specialists will recommend the most suitable options during your consultation.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>Is hair transplant permanent</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">Yes, hair transplant results are permanent. The transplanted follicles are taken from the donor area (typically the back of the head), which is genetically resistant to hair loss. Once transplanted, these follicles continue to grow naturally for the rest of your life.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)"><span>How much does treatment cost at Barley</span><i class="fas fa-chevron-down"></i></div>
+ <div class="faq-answer">Costs vary depending on the treatment type and extent of hair loss. Our pricing is typically 50-70% more affordable than equivalent clinics in North America, Europe, or Australia. Contact us for a free personalized quote with transparent pricing and no hidden fees.</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Contact -->
+ <section class="contact" id="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Contact Us</h2>
+ <div class="gold-divider"></div>
+ <p>Click to copy contact information</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')"><i class="fab fa-weixin"></i><h4>WeChat</h4><p>15810155700</p></div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')"><i class="fab fa-whatsapp"></i><h4>WhatsApp</h4><p>+86 13730143529</p></div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')"><i class="fas fa-envelope"></i><h4>Email</h4><p>hairtransplant@qq.com</p></div>
+ <div class="contact-item qrcode-card"><img src="images/erweima.jpg" alt="WeChat QR Code"></div>
+ </div>
+ <div class="contact-three-column">
+ <div class="contact-form-column">
+ <form id="contactForm" class="contact-form" novalidate>
+ <h3>Get Free Consultation</h3>
+ <div class="form-group"><input type="text" id="contactName" name="nickname" placeholder="Your Name *" required></div>
+ <div class="form-group"><input type="text" id="contactPhone" name="contact" placeholder="Phone/WeChat/WhatsApp *" required></div>
+ <div class="form-group">
+ <select id="contactProject" name="project" title="Please select a service">
+ <option value="">Select Service *</option>
+ <option value="发际线种植">Hairline Transplant</option>
+<option value="头发加密">Hair Thickening</option>
+ <option value="秃顶植发">Baldness Restoration</option>
+<option value="眉毛种植">Eyebrow Transplant</option>
+<option value="胡须种植">Beard Transplant</option>
+<option value="鬓角种植">Sideburns Transplant</option>
+<option value="体毛种植">Body Hair Transplant</option>
+<option value="脱发治疗">Hair Loss Treatment</option>
+<option value="头发养护">Hair Care</option>
+ </select>
+ </div>
+ <div class="form-group"><textarea id="contactMessage" name="message" placeholder="Your Message (Optional)" rows="4"></textarea></div>
+ <button type="button" id="contactSubmitBtn" class="btn btn-primary">Send Message</button>
+ </form>
+ <div class="about-barley-card">
+ <h4>About Barley</h4>
+ <p>Established by a team of doctors with 31 branches in China's major cities, Barley Microneedle Hair Transplant Hospital has always been pursuing the best technology, better quality and more safety to help you with all kinds of hair loss problems.</p>
+ </div>
+ </div>
+ <div class="contact-info-column">
+ <div class="contact-info-top">
+ <h3>You Might Also Want to Know</h3>
+ <p>Everyone's hair loss journey and solution are unique due to a variety of factors. Our hair restoration experts will assist you in determining the root cause and the best solution for your hair restoration plan.</p>
+ </div>
+ <div class="contact-info-bottom"><img src="images/test.jpg" alt="Hair Transplant Consultation"></div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="hairline-transplant.html">Hairline Transplant</a></li>
+ <li><a href="hair-thickening.html">Hair Thickening</a></li>
+ <li><a href="baldness-restoration.html">Baldness Restoration</a></li>
+ <li><a href="eyebrow-transplant.html">Eyebrow Transplant</a></li>
+ <li><a href="beard-transplant.html">Beard Transplant</a></li>
+ <li><a href="body-hair-transplant.html">Body Hair Transplant</a></li>
+ <li><a href="scar-hair-transplant.html">Scar Hair Transplant</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Loss Education</h4>
+ <ul>
+ <li><a href="hair-loss-treatment.html">Hair Loss Treatment</a></li>
+ <li><a href="hair-care.html">Hair Care</a></li>
+ <li><a href="minoxidil.html">Minoxidil</a></li>
+ <li><a href="finasteride.html">Finasteride</a></li>
+ <li><a href="male-hair-loss-guide.html">Male Hair Loss Guide</a></li>
+ <li><a href="female-hair-loss-guide.html">Female Hair Loss Guide</a></li>
+ <li><a href="is-hair-loss-genetic.html">Is Hair Loss Genetic</a></li>
+ <li><a href="does-daily-hair-loss-lead-to-balding.html">Daily Hair Loss vs Balding</a></li>
+ <li><a href="hair-loss-calculator.html">Hair Loss Calculator</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Transplant Education</h4>
+ <ul>
+ <li><a href="hair-transplant-cost.html">Hair Transplant Cost</a></li>
+ <li><a href="fue-hair-transplant.html">FUE Hair Transplant</a></li>
+ <li><a href="fut-hair-transplant.html">FUT Hair Transplant</a></li>
+ <li><a href="no-shave-hair-transplant.html">No-Shave Hair Transplant</a></li>
+ <li><a href="hair-transplant-process.html">Hair Transplant Process</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="reviews.html">Patient Reviews</a></li>
+ <li><a href="travel-to-china.html">Travel to China</a></li>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copyright">
+ <p>&copy; 2006-2026 Barley Hair Transplant Hospital. All rights reserved.</p>
+ <p class="footer-details">Leader in innovative microneedle hair restoration | 30+ clinic locations across China</p>
+ <p class="footer-disclaimer">Disclaimer: The information on this website is for educational purposes only and does not constitute medical advice. Please consult with a qualified healthcare professional for personalized treatment recommendations.</p>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Back to Top -->
+ <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/main.js"></script>
+ <script>
+ window.ZF_FORM_CONFIG = {
+ wechat: "15810155700",
+ qrcode: { enable: false, src: "/images/erweima.jpg" },
+ display: {
+ pcFloat: true,
+ mobileMode: "mini"
+ },
+ wechatRow: {
+ enable: false
+ },
+ language: {
+ enable: true,
+ showSwitch: false,
+ default: "en"
+ }
+ };
+ </script>
+ <script src="/sendemail/form2026.js"></script>
+ <script>
+ // Hair Loss Calculator Logic
+ const form = document.getElementById('hair-loss-calculator');
+ const steps = document.querySelectorAll('.calc-step');
+ const progressBar = document.querySelector('.calc-progress-bar .fill');
+ const currentStepSpan = document.querySelector('.current-step');
+ const resultDiv = document.getElementById('calc-result');
+ 
+ let currentStep = 1;
+ const totalSteps = 11;
+
+ // Next button
+ document.querySelectorAll('.btn-next').forEach(btn => {
+ btn.addEventListener('click', function() {
+ const nextStep = parseInt(this.getAttribute('data-next'));
+ goToStep(nextStep);
+ });
+ });
+
+ // Previous button
+ document.querySelectorAll('.btn-prev').forEach(btn => {
+ btn.addEventListener('click', function() {
+ const prevStep = parseInt(this.getAttribute('data-prev'));
+ goToStep(prevStep);
+ });
+ });
+
+ function goToStep(step) {
+ steps.forEach(s => s.classList.remove('active'));
+ document.querySelector(`[data-step="{step}"]`).classList.add('active');
+ currentStep = step;
+ currentStepSpan.textContent = step;
+ progressBar.style.width = `{(step / totalSteps) * 100}%`;
+ }
+
+ // Form submission - use click event instead to avoid conflicts
+ document.querySelector('form .btn-get-results').addEventListener('click', function(e) {
+ e.preventDefault();
+ e.stopPropagation();
+ calculateResult();
+ });
+
+ function calculateResult() {
+ const formData = new FormData(form);
+ let score = 0;
+
+ // Age factor
+ const age = parseInt(document.getElementById('calc-age').value);
+ if (age > 40) score += 2;
+ else if (age > 30) score += 1;
+
+ // Daily hair loss
+ const dailyLoss = formData.get('hair_loss_daily');
+ if (dailyLoss === 'Over 200') score += 3;
+ else if (dailyLoss === '150-200') score += 2;
+ else if (dailyLoss === '100-150') score += 1;
+
+ // Symptoms
+ const symptoms = formData.getAll('symptoms[]');
+ score += symptoms.length;
+
+ // Lifestyle
+ const lifestyle = formData.getAll('lifestyle[]');
+ if (lifestyle.includes('Smoking')) score += 1;
+ if (lifestyle.includes('Stress')) score += 1;
+
+ // Medical conditions
+ const medical = formData.getAll('medical[]');
+ if (!medical.includes('None Of The Above')) score += medical.length;
+
+ // Treatment
+ const treatment = formData.getAll('treatment[]');
+ if (!treatment.includes('None')) score += 2;
+
+ // Beauty activities
+ const beauty = formData.getAll('beauty[]');
+ if (!beauty.includes('None')) score += beauty.length;
+
+ // Diet
+ const diet = formData.get('diet');
+ if (diet === 'Poor') score += 2;
+ else if (diet === 'Moderate') score += 1;
+
+ // Family history
+ const familyHistory = formData.get('family_history');
+ if (familyHistory === 'Yes') score += 3;
+ else if (familyHistory === 'Not Sure') score += 1;
+
+ // Duration
+ const duration = formData.get('duration');
+ if (duration === 'More than 5 years') score += 3;
+ else if (duration === '3-5 years') score += 2;
+ else if (duration === '1-3 years') score += 1;
+
+ // Determine level and detailed recommendations
+ let level, description, treatments, careTips;
+ if (score <= 5) {
+ level = 'Mild Hair Loss';
+ description = 'Your hair loss is minimal and may be due to temporary factors such as stress or seasonal changes. Early intervention can prevent progression.';
+ treatments = [
+ 'Use gentle, sulfate-free shampoo to reduce scalp irritation',
+ 'Apply Minoxidil 2-5% solution twice daily to affected areas',
+ 'Consider our professional Hair Care treatment package',
+ 'Monthly scalp health check-ups with our specialists'
+ ];
+ careTips = [
+ 'Maintain a balanced diet rich in protein, iron, and vitamins B, C, D',
+ 'Reduce stress through meditation, yoga, or regular exercise',
+ 'Avoid tight hairstyles that pull on hair roots',
+ 'Get 7-8 hours of sleep per night for optimal hair growth',
+ 'Limit heat styling and chemical treatments',
+ 'Stay hydrated - drink at least 8 glasses of water daily'
+ ];
+ } else if (score <= 10) {
+ level = 'Moderate Hair Loss';
+ description = 'You are experiencing noticeable hair loss that may be progressing. Early intervention is strongly recommended to prevent further loss.';
+ treatments = [
+ 'Minoxidil 5% solution combined with Finasteride 1mg daily (for men)',
+ 'PRP (Platelet-Rich Plasma) therapy sessions every 4-6 weeks',
+ 'Low-Level Laser Therapy (LLLT) to stimulate hair follicles',
+ 'Professional hair thickening treatments at our clinic',
+ 'Consider hair transplant consultation for permanent solution'
+ ];
+ careTips = [
+ 'Use volumizing shampoo and avoid heavy conditioners on roots',
+ 'Massage scalp for 5 minutes daily to improve blood circulation',
+ 'Take biotin supplements (5000mcg) and zinc (15mg) daily',
+ 'Avoid smoking - it reduces blood flow to hair follicles',
+ 'Limit alcohol consumption which can dehydrate hair',
+ 'Protect hair from sun damage with hats or UV-protectant sprays',
+ 'Avoid vigorous towel drying - pat hair gently instead'
+ ];
+ } else if (score <= 15) {
+ level = 'Significant Hair Loss';
+ description = 'Your hair loss is significant and likely progressing. Professional treatment is strongly recommended to restore your hair and prevent further loss.';
+ treatments = [
+ 'FUE Microneedle Hair Transplant - permanent solution with natural results',
+ 'Combination therapy: Minoxidil + Finasteride + PRP',
+ 'Scalp Micropigmentation (SMP) for immediate visual density',
+ 'Monthly professional hair restoration treatments',
+ 'Post-transplant care package with specialized products'
+ ];
+ careTips = [
+ 'Follow post-transplant care instructions carefully if you choose surgery',
+ 'Use prescribed medicated shampoo and topical solutions',
+ 'Avoid strenuous exercise for 2 weeks after transplant',
+ 'Sleep with head elevated for first week after procedure',
+ 'Maintain nutrient-rich diet with extra protein and vitamins',
+ 'Avoid direct sun exposure on treated areas for 3 months',
+ 'Attend all follow-up appointments for optimal results',
+ 'Consider counseling for emotional support during treatment'
+ ];
+ } else {
+ level = 'Severe Hair Loss';
+ description = 'You are experiencing severe hair loss that requires immediate professional attention. Our advanced treatments can provide significant restoration.';
+ treatments = [
+ 'Advanced FUE Microneedle Hair Transplant with high-density grafting',
+ 'Body Hair Transplant (BHT) if scalp donor area is limited',
+ 'Combination of multiple treatment modalities for maximum results',
+ 'Stem Cell Therapy (emerging treatment option)',
+ 'Custom hair system integration with remaining natural hair',
+ 'Intensive post-operative care and monitoring'
+ ];
+ careTips = [
+ 'Strict adherence to post-operative care protocol',
+ 'Use only surgeon-recommended hair care products',
+ 'Avoid all chemical treatments and heat styling permanently',
+ 'Wear protective headgear in sun and cold weather',
+ 'Maintain excellent nutrition with supplements as prescribed',
+ 'Manage stress through professional counseling if needed',
+ 'Join support groups for emotional well-being',
+ 'Regular check-ups every 3-6 months for monitoring',
+ 'Consider lifestyle changes to support long-term hair health'
+ ];
+ }
+
+ // Build treatment recommendations
+ let treatmentHTML = '<div class="result-section treatment"><h3><i class="fas fa-stethoscope"></i> Recommended Treatment Plan</h3><ul>';
+ treatments.forEach(t => {
+ treatmentHTML += `<li>{t}</li>`;
+ });
+ treatmentHTML += '</ul></div>';
+ 
+ // Build care tips
+ let careHTML = '<div class="result-section care"><h3><i class="fas fa-heart"></i> Daily Care & Lifestyle Tips</h3><ul>';
+ careTips.forEach(t => {
+ careHTML += `<li>{t}</li>`;
+ });
+ careHTML += '</ul></div>';
+ 
+ // Insert into result div
+ const resultContent = `
+ <h2>Your Hair Loss Assessment</h2>
+ <div class="result-level">{level}</div>
+ <p>{description}</p>
+ {treatmentHTML}
+ {careHTML}
+ <p style="margin-top: 30px; font-size: 20px; font-weight: 600; color: var(--primary-blue);">Ready to take the next step</p>
+ <a href="contact.html" class="btn btn-primary" style="padding: 18px 50px; font-size: 20px; margin-top: 15px;">Schedule Free Consultation <i class="fas fa-long-arrow-alt-right"></i></a>
+ `;
+ 
+ resultDiv.innerHTML = resultContent;
+ 
+ form.style.display = 'none';
+ document.querySelector('.calc-progress').style.display = 'none';
+ resultDiv.style.display = 'block';
+ }
+ </script>
+</body>
+</html>

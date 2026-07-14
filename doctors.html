@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<!-- ========================================
+ doctors - Barley Hair Transplant Hospital
+ Page: doctors.html
+ ======================================== -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Best Hair Transplant Surgeons in China | Barley's Board-Certified Medical Team</title>
+ <meta name="description" content="Meet Barley's elite team of 20+ board-certified hair transplant surgeons. Each doctor holds 10-20+ years of specialized experience in FUE, microneedle DHI, and artistic hairline design. English-speaking staff. Free online consultation for international patients.">
+ <meta name="keywords" content="best hair transplant surgeon China, board certified hair doctors Beijing, experienced FUE surgeons China, English speaking hair transplant doctor, Barley Hair medical team, certified hair restoration specialist China, hair transplant for foreigners China, hairline design expert China, Dr Yin Canchang hair transplant, female hair transplant specialist China">
+ <meta name="robots" content="index, follow">
+ <meta name="author" content="Barley Hair Transplant Hospital">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Best Hair Transplant Surgeons in China | Barley's Board-Certified Medical Team">
+ <meta property="og:description" content="Meet Barley's elite team of 20+ board-certified hair transplant surgeons. Each doctor holds 10-20+ years of specialized experience with 100,000+ successful procedures.">
+ <meta property="og:url" content="https://www.barleyhair.com/doctors.html">
+ <meta property="og:site_name" content="Barley Hair Transplant Hospital">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:image" content="https://www.barleyhair.com/Banner/hero-4.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Best Hair Transplant Surgeons in China | Barley Medical Team">
+ <meta name="twitter:description" content="20+ board-certified hair transplant surgeons with 10-20+ years of experience each. Free online consultation available.">
+<style>
+/* ========================================
+ Doctors Page - Page Specific Styles
+ ======================================== */
+.doctors-section {
+ padding: 80px 0;
+ background: var(--white);
+}
+
+.section-header {
+ text-align: center;
+ margin-bottom: 60px;
+}
+
+.section-subtitle {
+ display: inline-block;
+ padding: 8px 20px;
+ background: var(--soft-blue);
+ color: var(--primary-blue);
+ border-radius: 20px;
+ font-size: 14px;
+ font-weight: 600;
+ margin-bottom: 15px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+}
+
+.section-header h1 {
+ font-size: 42px;
+ color: var(--primary-blue);
+ margin-bottom: 20px;
+}
+
+.section-header p {
+ font-size: 18px;
+ color: var(--text-gray);
+ max-width: 800px;
+ margin: 0 auto;
+ line-height: 1.8;
+}
+
+.doctors-container {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 40px;
+}
+
+.doctor-profile {
+ background: var(--white);
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: var(--shadow-sm);
+ transition: all 0.3s ease;
+}
+
+.doctor-profile:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+}
+
+.doctor-photo-wrapper {
+ position: relative;
+ width: 100%;
+ aspect-ratio: 314 / 461;
+ overflow: hidden;
+}
+
+.doctor-photo {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.doctor-badge {
+ position: absolute;
+ top: 15px;
+ right: 15px;
+ width: 50px;
+ height: 50px;
+ background: var(--accent-gold);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 24px;
+ color: var(--white);
+}
+
+.doctor-details {
+ padding: 30px;
+}
+
+.doctor-details h3 {
+ font-size: 24px;
+ color: var(--primary-blue);
+ margin-bottom: 10px;
+}
+
+.doctor-position {
+ font-size: 16px;
+ color: var(--accent-gold);
+ font-weight: 600;
+ margin-bottom: 15px;
+}
+
+.doctor-bio {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ margin-bottom: 20px;
+}
+
+.doctor-expertise {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+
+.expertise-tag {
+ padding: 6px 15px;
+ background: var(--soft-blue);
+ color: var(--primary-blue);
+ border-radius: 20px;
+ font-size: 13px;
+ font-weight: 600;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+ padding: 80px 0;
+ background: var(--bg-light);
+}
+
+.features-showcase {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+ margin-top: 40px;
+}
+
+.feature-card.enhanced {
+ background: var(--white);
+ padding: 35px;
+ border-radius: 12px;
+ box-shadow: var(--shadow-sm);
+ display: flex;
+ gap: 20px;
+ transition: all 0.3s ease;
+}
+
+.feature-card.enhanced:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+}
+
+.feature-icon-wrapper {
+ width: 60px;
+ height: 60px;
+ background: var(--gradient-primary);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 26px;
+ color: var(--white);
+ flex-shrink: 0;
+}
+
+.feature-content h3 {
+ font-size: 20px;
+ color: var(--primary-blue);
+ margin-bottom: 12px;
+}
+
+.feature-content p {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.8;
+}
+
+.trust-indicators {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 30px;
+ margin-top: 60px;
+}
+
+.trust-item {
+ text-align: center;
+}
+
+.trust-item i {
+ font-size: 40px;
+ color: var(--accent-gold);
+ margin-bottom: 15px;
+}
+
+.trust-item h4 {
+ font-size: 18px;
+ color: var(--primary-blue);
+ margin-bottom: 10px;
+}
+
+.trust-item p {
+ font-size: 14px;
+ color: var(--text-gray);
+}
+
+/* Safety Guarantees Section */
+.safety-guarantees {
+ padding: 80px 0;
+ background: var(--white);
+}
+
+.safety-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+ margin-top: 40px;
+}
+
+.safety-card {
+ background: var(--white);
+ padding: 40px 30px;
+ border-radius: 12px;
+ box-shadow: var(--shadow-sm);
+ text-align: center;
+ transition: all 0.3s ease;
+ border-top: 4px solid var(--accent-gold);
+}
+
+.safety-card:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+}
+
+.safety-icon {
+ width: 80px;
+ height: 80px;
+ background: var(--gradient-primary);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto 20px;
+ font-size: 36px;
+ color: var(--white);
+}
+
+.safety-card h3 {
+ font-size: 20px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+}
+
+.safety-card p {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+ .doctors-container {
+ grid-template-columns: repeat(2, 1fr);
+ }
+
+ .trust-indicators {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ 
+ .features-showcase {
+ grid-template-columns: 1fr;
+ }
+ 
+ .safety-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .section-header h1 {
+ font-size: 32px;
+ }
+}
+ </style>
+</head>
+<body>
+ <!-- ============ Header ============ -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <img src="images/logo.png" alt="Barley Hair Transplant Hospital">
+ <span class="logo-text-desktop">Barley Hair Transplant Hospital</span><span class="logo-text-mobile">Barley Hair Hospital</span>
+ </div>
+ <div class="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html" class="active">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+
+
+ <!-- ============ Hero Section ============ -->
+ <section class="hero">
+ <div class="hero-slides" id="heroSlides">
+ <div class="hero-slide">
+ <img src="Banner/hero-2.jpg" alt="Doctors - Professional Hair Transplant Service">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Expert Hair Restoration Surgeons</h2>
+ <p>Board-certified specialists with 18+ years of experience in microneedle hair transplantation, dedicated to delivering natural results for international patients.</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-5.jpg" alt="Doctors - Expert Hair Restoration">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Artistic Hairline Design</h2>
+ <p>Our surgeons blend surgical precision with facial aesthetics to create personalized, natural-looking hairlines that complement your unique features.</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-11.jpg" alt="Doctors - Natural Hair Results">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Dedicated International Patient Support</h2>
+ <p>Our multilingual team provides seamless English-language support, from your first online consultation through your complete recovery journey.</p>
+ <a href="contact.html" class="btn">Get Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- <div class="hero-nav" id="heroNav"></div> -->
+ </section>
+
+ <!-- Our Medical Team -->
+ <section class="doctors-section">
+ <div class="container">
+ <div class="section-header">
+ <span class="section-subtitle">Meet Our Specialists</span>
+ <h1>Our Medical Team</h1>
+ <p>Our distinguished team of hair restoration specialists combines decades of expertise with advanced microneedle technology. Each doctor is board-certified, internationally trained, and committed to delivering exceptional, natural-looking results for patients worldwide.</p>
+ </div>
+ 
+ <div class="doctors-container">
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/ycc.jpg" alt="Dr. Yin Canchang" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Yin Canchang</h3>
+ <p class="doctor-position">Director, Beijing Clinic</p>
+ <p class="doctor-bio">Associate Chief Physician and founding member of the Asian Hair Transplant Association. Dr. Yin is a nationally recognized hair restoration specialist with a focus on revision surgery and complex corrective cases. He has successfully restored hair for thousands of patients whose previous procedures failed elsewhere.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Corrective Surgery</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/wxp.jpg" alt="Dr. Wang Xiaoping" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Wang Xiaoping</h3>
+ <p class="doctor-position">Technical Director, Beijing Clinic</p>
+ <p class="doctor-bio">A pioneer in artistic microneedle transplantation, Dr. Wang specializes in large-area restoration and density enhancement. He has treated hundreds of international patients and is known for his meticulous approach to graft placement and natural-looking outcomes.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Artistic Transplant</span>
+ <span class="expertise-tag">Large Area</span>
+ <span class="expertise-tag">Density Enhancement</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/fyp.jpg" alt="Dr. Feng Yuping" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Feng Yuping</h3>
+ <p class="doctor-position">Technical Director, Beijing Clinic</p>
+ <p class="doctor-bio">Dr. Feng is highly regarded for her refined hairline design skills and mastery of FGF dual-factor microneedle transplantation. Her gentle technique and attention to aesthetic detail have earned her a loyal following among patients from overseas.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">FGF Technology</span>
+ <span class="expertise-tag">Large Area</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/shw.jpg" alt="Dr. Song Hongwei" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Song Hongwei</h3>
+ <p class="doctor-position">Director, Beijing Clinic</p>
+ <p class="doctor-bio">An active participant in the 528 Hair Love Foundation's charitable outreach, Dr. Song combines clinical excellence with a genuine commitment to making quality hair restoration accessible. He is particularly skilled in hairline design and large-area procedures using FGF technology.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">FGF Technology</span>
+ <span class="expertise-tag">Large Area</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/lsj.jpg" alt="Dr. Li Shijun" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Li Shijun</h3>
+ <p class="doctor-position">Director, Beijing Clinic</p>
+ <p class="doctor-bio">Dr. Li brings years of hands-on clinical experience to every procedure. Known for his patient-centered approach, he takes time to understand each individual's goals and tailors the surgical plan accordingly, with a strong track record in international patient care.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">FGF Technology</span>
+ <span class="expertise-tag">Large Area</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/gjy.jpg" alt="Dr. Guan Jueyin" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Guan Jueyin</h3>
+ <p class="doctor-position">Director, Chengdu Clinic</p>
+ <p class="doctor-bio">Dr. Guan leads the Chengdu clinic with a specialty in microneedle FUE and artistic hair transplantation. He has developed a reputation for delivering consistently high graft survival rates and has welcomed numerous international patients to his practice.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle FUE</span>
+ <span class="expertise-tag">Artistic Transplant</span>
+ <span class="expertise-tag">Large Area</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/dlw.jpg" alt="Dr. Duan Longwen" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Duan Longwen</h3>
+ <p class="doctor-position">Technical Director, Nanchang Clinic</p>
+ <p class="doctor-bio">As the technical lead for the Nanchang clinic, Dr. Duan is an expert in no-shave extraction techniques and large-area follicle harvesting. His proficiency with FGF technology allows for faster recovery and more robust graft growth.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">No-Shave Extraction</span>
+ <span class="expertise-tag">Large-Area Extraction</span>
+ <span class="expertise-tag">FGF Technology</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/gfl.jpg" alt="Dr. Gao Falu" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Gao Falu</h3>
+ <p class="doctor-position">Director, Jinan Clinic</p>
+ <p class="doctor-bio">Dr. Gao is a seasoned practitioner at the Jinan clinic with deep expertise in hairline design and microneedle density optimization. His use of FGF-enhanced transplantation technology promotes faster healing and fuller results for every patient.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">FGF Technology</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/xjm.jpg" alt="Dr. Xiong Jingmin" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Xiong Jingmin</h3>
+ <p class="doctor-position">Director, Nanchang Clinic</p>
+ <p class="doctor-bio">Dr. Xiong directs the Nanchang clinic with a focus on high-density microneedle transplantation and large-area coverage. His expertise with FGF technology enables faster healing times and consistently strong graft growth.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">FGF Technology</span>
+ <span class="expertise-tag">Large-Area Transplant</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/lzh.jpg" alt="Dr. Liu Ziheng" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Liu Ziheng</h3>
+ <p class="doctor-position">Director, Qingdao Clinic</p>
+ <p class="doctor-bio">Dr. Liu heads the Qingdao clinic, bringing a wealth of experience in microneedle transplantation and large-area restoration. His proficiency with FGF technology ensures optimal outcomes with minimal downtime for his patients.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Transplant</span>
+ <span class="expertise-tag">FGF Technology</span>
+ <span class="expertise-tag">Large-Area Transplant</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/mgc.jpg" alt="Dr. Ma Guicai" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Ma Guicai</h3>
+ <p class="doctor-position">Director, Shanghai Clinic</p>
+ <p class="doctor-bio">Dr. Ma leads the Shanghai clinic and is widely respected for his expertise in high-density microneedle procedures, artistic hairline work, and scar repair from previous transplant surgeries. His precision-driven approach delivers consistently natural results.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">Microneedle Artistry</span>
+ <span class="expertise-tag">Scar Repair</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/fhg.jpg" alt="Dr. Fu Huagang" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Fu Huagang</h3>
+ <p class="doctor-position">Technical Director, Shanghai Clinic</p>
+ <p class="doctor-bio">Dr. Fu serves as Technical Director in Shanghai and is a dedicated member of the 528 Hair Love Foundation's charitable medical outreach program. He specializes in microneedle density optimization, artistic hairline design, and surgical scar revision.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">Microneedle Artistry</span>
+ <span class="expertise-tag">Scar Repair</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/gcc.jpg" alt="Dr. Ge Chunchao" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Ge Chunchao</h3>
+ <p class="doctor-position">Technical Director, Shenyang Clinic</p>
+ <p class="doctor-bio">Dr. Ge is a board member of the China Medical Association's Plastic and Aesthetic Surgery Branch and serves as Technical Director at the Shenyang clinic. He specializes in the full range of microneedle transplantation techniques with particular strength in density optimization and artistic hair restoration.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Transplant</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">Microneedle Artistry</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/wy.jpg" alt="Dr. Wang Yue" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Wang Yue</h3>
+ <p class="doctor-position">Director, Xi'an Clinic</p>
+ <p class="doctor-bio">Dr. Wang, a board member of the China Medical Association's Plastic and Aesthetic Surgery Branch, leads the Xi'an clinic. He is highly skilled in hairline design, high-density microneedle procedures, and comprehensive large-area transplant surgery.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">Large-Area Transplant</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/zcc.jpg" alt="Dr. Zhong Chaochao" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Zhong Chaochao</h3>
+ <p class="doctor-position">Director, Zhengzhou Clinic</p>
+ <p class="doctor-bio">Associate Chief Physician in Plastic Surgery and an active participant in the 528 Hair Love Foundation's charitable outreach. Dr. Zhong is known for his expertise in specialized transplants including facial hair restoration such as sideburns and eyebrows.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Microneedle Transplant</span>
+ <span class="expertise-tag">Sideburn Transplant</span>
+ <span class="expertise-tag">Eyebrow Transplant</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/fjw.jpg" alt="Dr. Fang Jianwen" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Fang Jianwen</h3>
+ <p class="doctor-position">Technical Director, Shanghai Clinic</p>
+ <p class="doctor-bio">Associate Chief Physician in Surgery with affiliations at Harbin Hospital's Internet Hospital platform. Dr. Fang excels in large-area transplantation, microneedle density optimization, and refined artistic hairline creation.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Large-Area Transplant</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ <span class="expertise-tag">Microneedle Artistry</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/cjx.jpg" alt="Dr. Cui Jinxiu" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Cui Jinxiu</h3>
+ <p class="doctor-position">Doctor, Beijing Clinic</p>
+ <p class="doctor-bio">A dedicated member of the 528 Hair Love Foundation's charitable medical program, Dr. Cui is recognized for her artistic approach to hair transplantation and her ability to achieve natural-looking density in every procedure.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Artistic Transplant</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/lwx.jpg" alt="Dr. Lin Wenxiang" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Lin Wenxiang</h3>
+ <p class="doctor-position">Doctor, Guangzhou Clinic</p>
+ <p class="doctor-bio">Dr. Lin practices at the Guangzhou clinic and actively participates in the 528 Hair Love Foundation's charitable outreach. He specializes in hairline design, large-area transplantation, and high-density microneedle procedures.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">Large-Area Transplant</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/lcy.jpg" alt="Dr. Liu Cuiyun" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Liu Cuiyun</h3>
+ <p class="doctor-position">Hair Transplant Doctor, Beijing Clinic</p>
+ <p class="doctor-bio">Dr. Liu is affiliated with Harbin Hospital's Internet Hospital and provides comprehensive hair loss evaluation and treatment. She takes a holistic approach to addressing different types and stages of hair thinning and baldness.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Comprehensive Hair Loss Treatment</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/fyf.jpg" alt="Dr. Fang Yifang" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Fang Yifang</h3>
+ <p class="doctor-position">Hair Transplant Doctor, Beijing Clinic</p>
+ <p class="doctor-bio">Affiliated with Harbin Hospital's Internet Hospital, Dr. Fang specializes in comprehensive hair loss management, personalized hairline design, and large-area transplant procedures for advanced hair loss cases.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Comprehensive Hair Loss Treatment</span>
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">Large-Area Transplant</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="doctor-profile">
+ <div class="doctor-photo-wrapper">
+ <img src="Doctor/tqr.jpg" alt="Dr. Tang Qianrong" class="doctor-photo">
+ <div class="doctor-badge">
+ <i class="fas fa-award"></i>
+ </div>
+ </div>
+ <div class="doctor-details">
+ <h3>Dr. Tang Qianrong</h3>
+ <p class="doctor-position">Hair Transplant Doctor, Beijing Clinic</p>
+ <p class="doctor-bio">Dr. Tang, also affiliated with Harbin Hospital's Internet Hospital, focuses on hairline design, extensive hair loss treatment, and high-density microneedle transplantation for patients seeking natural, long-lasting results.</p>
+ <div class="doctor-expertise">
+ <span class="expertise-tag">Hairline Design</span>
+ <span class="expertise-tag">Large-Area Hair Loss Treatment</span>
+ <span class="expertise-tag">Microneedle Density</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Why Choose Our Team -->
+ <section class="why-choose-section">
+ <div class="container">
+ <div class="section-header">
+ <span class="section-subtitle">Why Choose Us</span>
+ <h2>Why Our Doctors Stand Out</h2>
+ <p>Experience the difference of working with internationally trained hair restoration specialists committed to excellence.</p>
+ </div>
+
+ <div class="features-showcase">
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-graduation-cap"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Board-Certified Surgeons</h3>
+ <p>Every doctor on our team is fully board-certified and has completed rigorous specialized training in hair restoration, ensuring the highest standards of patient safety and surgical outcomes.</p>
+ </div>
+ </div>
+
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-briefcase-medical"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Decades of Clinical Experience</h3>
+ <p>With over 100,000 successful procedures completed collectively, our surgeons bring unmatched hands-on expertise to every single case, from simple touch-ups to complex full-scalp restorations.</p>
+ </div>
+ </div>
+
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-certificate"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Globally Recognized Credentials</h3>
+ <p>Our physicians hold certifications from leading international hair restoration organizations and regularly train at prestigious medical institutions around the world.</p>
+ </div>
+ </div>
+
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-hands-helping"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Personalized Patient Care</h3>
+ <p>From your very first consultation through your final follow-up, you'll receive dedicated one-on-one support tailored to your individual needs, concerns, and recovery journey.</p>
+ </div>
+ </div>
+
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-comments"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Fluent English-Speaking Staff</h3>
+ <p>Our multilingual patient coordinators ensure seamless communication at every stage, from pre-trip planning and video consultations to in-clinic guidance and post-operative follow-ups.</p>
+ </div>
+ </div>
+
+ <div class="feature-card enhanced">
+ <div class="feature-icon-wrapper">
+ <i class="fas fa-star"></i>
+ </div>
+ <div class="feature-content">
+ <h3>Consistently Outstanding Ratings</h3>
+ <p>Our surgeons maintain perfect 5-star ratings across thousands of verified patient reviews from every corner of the globe, reflecting our unwavering commitment to quality.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="trust-indicators">
+ <div class="trust-item">
+ <i class="fas fa-shield-alt"></i>
+ <h4>100% Safety Record</h4>
+ <p>All procedures adhere to internationally recognized safety standards</p>
+ </div>
+ <div class="trust-item">
+ <i class="fas fa-clock"></i>
+ <h4>20+ Years Average</h4>
+ <p>Clinical experience of our senior surgical team</p>
+ </div>
+ <div class="trust-item">
+ <i class="fas fa-globe-asia"></i>
+ <h4>30+ Clinics</h4>
+ <p>Conveniently located across major Chinese cities</p>
+ </div>
+ <div class="trust-item">
+ <i class="fas fa-smile"></i>
+ <h4>98% Satisfaction Rate</h4>
+ <p>Across all patient groups and procedure types</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Safety Guarantees -->
+ <section class="safety-guarantees">
+ <div class="container">
+ <div class="section-title">
+ <h2>Your Safety Is Our Priority</h2>
+ <div class="gold-divider"></div>
+ <p>Peace of mind from consultation to complete recovery</p>
+ </div>
+ <div class="safety-grid">
+ <div class="safety-card">
+ <div class="safety-icon">
+ <i class="fas fa-smile-beam"></i>
+ </div>
+ <h3>Comfortable, Pain-Free Procedure</h3>
+ <p>Our advanced local anesthesia techniques ensure you remain completely comfortable throughout the entire procedure. We guarantee a high follicle survival rate, and our patients consistently report minimal discomfort during recovery.</p>
+ </div>
+ <div class="safety-card">
+ <div class="safety-icon">
+ <i class="fas fa-shield-alt"></i>
+ </div>
+ <h3>Licensed, Certified Professionals</h3>
+ <p>Every member of our surgical team holds full medical licenses and professional certifications. We follow strict international safety protocols so you can trust the quality and integrity of your care at every step.</p>
+ </div>
+ <div class="safety-card">
+ <div class="safety-icon">
+ <i class="fas fa-leaf"></i>
+ </div>
+ <h3>Minimally Invasive Technology</h3>
+ <p>Our precision microneedle approach means smaller incisions, faster healing, and virtually no visible scarring. You'll be back to your daily routine sooner than you think, with natural-looking results that speak for themselves.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Before & After Gallery -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Real Patient Transformations</h2>
+ <div class="gold-divider"></div>
+ <p>See the remarkable results our patients have achieved</p>
+ </div>
+ <div class="gallery-grid" id="beforeAfterGallery">
+ <div class="gallery-item">
+ <img src="manBald/manBald-26.jpg" alt="Male Baldness Restoration">
+ <div class="gallery-overlay">
+ <h4>Complete Transformation</h4>
+ <p>Full coverage restoration</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-6.jpg" alt="Male Baldness Treatment">
+ <div class="gallery-overlay">
+ <h4>Dramatic Results</h4>
+ <p>Before and after comparison</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-16.jpg" alt="Male Hairline Restoration">
+ <div class="gallery-overlay">
+ <h4>Natural Hairline</h4>
+ <p>Expertly designed results</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-12.jpg" alt="Male Hairline Treatment">
+ <div class="gallery-overlay">
+ <h4>Optimal Density</h4>
+ <p>Natural-looking fullness</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-1.jpg" alt="Male Baldness Procedure">
+ <div class="gallery-overlay">
+ <h4>Stunning Transformation</h4>
+ <p>Side-by-side comparison</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-31.jpg" alt="Male Hairline Procedure">
+ <div class="gallery-overlay">
+ <h4>Natural-Looking Results</h4>
+ <p>Verified patient case</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ Doctor Patient Photos ============ -->
+ <section class="technology">
+ <div class="container">
+ <div class="section-title">
+ <h2>Happy Patients</h2>
+ <div class="gold-divider"></div>
+ <p>Moments captured with our satisfied patients</p>
+ </div>
+ <div class="photos-grid" id="doctorPatientPhotos">
+ <div class="photo-item">
+ <img src="Photos/Photos-73.jpg" alt="Satisfied Patient 1">
+ <div class="photo-caption">
+ <h4>Thrilled with Results</h4>
+ <p>Patient celebrating with our surgical team</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-37.jpg" alt="Satisfied Patient 2">
+ <div class="photo-caption">
+ <h4>A New Confidence</h4>
+ <p>Patient with our lead surgeon post-recovery</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-24.jpg" alt="Satisfied Patient 3">
+ <div class="photo-caption">
+ <h4>Beyond Expectations</h4>
+ <p>Another happy patient shares their story</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-45.jpg" alt="Satisfied Patient 4">
+ <div class="photo-caption">
+ <h4>Ready for a Fresh Start</h4>
+ <p>Patient with specialist before leaving the clinic</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-23.jpg" alt="Satisfied Patient 5">
+ <div class="photo-caption">
+ <h4>Natural Hairline Restored</h4>
+ <p>Happy patient with our specialist post-treatment</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-70.jpg" alt="Satisfied Patient 6">
+ <div class="photo-caption">
+ <h4>A Successful Journey</h4>
+ <p>Patient proudly showing their new look</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-65.jpg" alt="Satisfied Patient 7">
+ <div class="photo-caption">
+ <h4>Confidence Restored</h4>
+ <p>Patient thrilled with their transformation</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-55.jpg" alt="Satisfied Patient 8">
+ <div class="photo-caption">
+ <h4>A Fresh Beginning</h4>
+ <p>Patient starting a new chapter with restored hair</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Testimonials -->
+ <section class="testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>What Our Patients Say</h2>
+ <div class="gold-divider"></div>
+ <p>Verified testimonials from patients around the world</p>
+ </div>
+ <div class="testimonials-grid" id="testimonials">
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"Dr. Chen spent forty-five minutes with me during the consultation alone, mapping my hairline on his tablet and explaining why certain angles would look more natural for my face shape. I've never had a doctor invest that much time in a single consultation. You can tell he genuinely cares."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">GT</div>
+ <div class="testimonial-info">
+ <h4>Gregor Thaler</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Austria</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"What set Dr. Wang apart was his honesty. He told me I needed fewer grafts than another clinic had quoted me, and explained exactly why. He didn't try to upsell me — he just gave me the truth. That level of integrity is incredibly rare in this industry."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">SB</div>
+ <div class="testimonial-info">
+ <h4>Sebastian Brun</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Norway</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"The surgeon performed the entire extraction and implantation himself — not a technician. That was a non-negotiable requirement for me, and I was glad Barley's protocol puts qualified surgeons in charge of every critical step. The precision was flawless."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">RH</div>
+ <div class="testimonial-info">
+ <h4>Rafael Herrera</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Spain</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"During the seven-hour procedure, the lead surgeon checked on me every hour, adjusted the music, asked if I needed water, and even showed me a progress photo at the halfway point. It felt like having a personal doctor rather than being just another case on the schedule."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">AN</div>
+ <div class="testimonial-info">
+ <h4>Anya Novak</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Czech Republic</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"My surgeon had performed over 8,000 procedures before mine. You can sense that level of experience in his hands — everything moved with confidence and speed, yet with incredible attention to detail. He's a true master of his craft."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">YM</div>
+ <div class="testimonial-info">
+ <h4>Yuki Mori</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Japan</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"Three months post-op, I sent my follow-up photos through WhatsApp and the surgeon replied personally with a video call to walk me through the progress. That's not a coordinator or an assistant — the actual operating surgeon. I've never experienced that kind of aftercare from any doctor."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">DK</div>
+ <div class="testimonial-info">
+ <h4>Daniel Krr</h4>
+ <p><i class="fas fa-map-marker-alt"></i> Germany</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ Hospital Environment ============ -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Clinic Environment</h2>
+ <div class="gold-divider"></div>
+ <p>Modern, comfortable, and built to international standards</p>
+ </div>
+ <div class="hospital-grid" id="hospitalGallery">
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-14.jpg" alt="Operating Room">
+ <div class="hospital-caption">
+ <h4>State-of-the-Art Operating Room</h4>
+ <p>Fully equipped and sterilized</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-43.jpg" alt="Consultation Room">
+ <div class="hospital-caption">
+ <h4>Private Consultation Suite</h4>
+ <p>Confidential and comfortable</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-21.jpg" alt="Recovery Area">
+ <div class="hospital-caption">
+ <h4>Dedicated Recovery Lounge</h4>
+ <p>Relaxing post-procedure care</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-49.jpg" alt="Reception Area">
+ <div class="hospital-caption">
+ <h4>Welcoming Reception</h4>
+ <p>Your first impression of our clinic</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-39.jpg" alt="Modern Clinic Interior">
+ <div class="hospital-caption">
+ <h4>Modern Clinic Interior</h4>
+ <p>Designed for patient comfort</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-62.jpg" alt="Waiting Area">
+ <div class="hospital-caption">
+ <h4>Premium Waiting Lounge</h4>
+ <p>Relax before your appointment</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Locations -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Frequently Asked Questions About Our Medical Team</h2>
+ <div class="gold-divider"></div>
+ <p>Everything you need to know about our surgeons and their qualifications</p>
+ </div>
+ <div id="faqContainer">
+ <div class="faq-item active">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What medical licenses and certifications do Barley surgeons hold</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Every Barley surgeon holds a practicing medical license issued by China's National Health Commission, and many hold additional board certifications in dermatology or plastic surgery. Our senior physicians also maintain membership in recognized professional bodies such as the Asian Medical Hair Restoration Association and the China Medical Association's Plastic and Aesthetic Surgery Branch.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How many procedures has the average Barley surgeon performed</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Our lead surgeons each have personally completed over 5,000 individual hair transplant procedures, with several senior doctors exceeding 10,000 cases. Across the entire medical team, Barley has delivered over 100,000 successful procedures since 2006. This depth of hands-on experience is something very few clinics worldwide can match.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Do you have doctors who can communicate fluently in English</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes. Multiple members of our clinical team speak fluent English, and our international patient department provides dedicated English-speaking coordinators who accompany you from your first message through your final follow-up. We also offer consultation via WhatsApp and WeChat video calls in English.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can I request a specific surgeon for my procedure</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Absolutely. You can review our full doctor directory and request any surgeon who matches your needs. During your initial consultation, our coordinator will also recommend the physician whose specialization best aligns with your specific case, whether that's hairline design, corrective surgery, or female pattern restoration.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Will the same doctor who consults me also perform the surgery</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes. The physician who evaluates your scalp, designs your hairline, and plans your graft count will be the same doctor who performs your procedure. This continuity ensures the surgical plan is executed precisely as discussed. The same doctor also handles your immediate post-operative check and follow-up appointments.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Do your doctors specialize in specific types of hair restoration</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes. While all our surgeons are proficient in the full range of transplant techniques, individual doctors have particular strengths. Some excel at artistic hairline design, others specialize in large-area baldness coverage, corrective surgery for failed transplants, or female diffuse thinning. We match your case to the right specialist.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How does Barley train new surgeons on the microneedle system</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Our training program is structured and multi-phase. New surgeons first complete extensive classroom study of our proprietary techniques, then assist on hundreds of cases under senior supervision, then perform procedures with direct oversight before being cleared for independent practice. This apprenticeship model typically takes 12-18 months before a surgeon is fully certified in our system.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Who actually performs the extraction and implantation during surgery</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ The lead surgeon oversees every step and personally performs the critical phases, including hairline design, recipient site creation, and implantation of the most visible frontal zone grafts. A trained surgical team assists with follicle extraction and graft preparation under the surgeon's direct supervision. This team-based approach maximizes efficiency while maintaining quality control.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Are your doctors experienced with international patients</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Our clinical team regularly treats patients from North America, Europe, Southeast Asia, Australia, and the Middle East. Our doctors understand the different hair characteristics, aesthetic expectations, and cultural considerations of various ethnic backgrounds. This international experience ensures your results will look natural within your own ethnic context.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can I see before-and-after cases performed by a specific doctor</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ During your consultation, we can show you a portfolio of cases handled by any doctor you're interested in. We maintain detailed case files organized by surgeon, procedure type, and hair loss category. You'll be able to review results from cases similar to your own situation before making your decision.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What happens if I'm not satisfied with my results</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Patient satisfaction is taken extremely seriously. If your results don't meet the agreed-upon expectations, the original surgeon will reassess your case and discuss corrective options. In rare situations where graft survival falls below our guaranteed threshold, we offer complimentary touch-up procedures. We document every step of your surgery for full accountability.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Do your doctors also provide non-surgical treatments</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes. Our physicians are trained to evaluate and recommend the full spectrum of hair loss treatments, including PRP therapy, low-level laser treatment, prescription medications like finasteride and minoxidil, and nutritional supplements. Many patients benefit from a combined approach that pairs surgery with ongoing medical management for optimal long-term density.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>How do Barley doctors stay current with global hair restoration trends</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Our surgeons regularly attend international conferences including the ISHRS World Congress and regional medical hair restoration symposia. They participate in peer-reviewed research, exchange knowledge with colleagues worldwide, and continuously refine our techniques. Our internal R&D department also develops new tools and protocols based on the latest scientific findings.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>What is the doctor-to-patient ratio during a transplant procedure</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Each procedure has one lead surgeon, one to two assisting doctors, and a team of trained technicians. For a typical 2,500-graft session, you'll have at least 5-6 medical professionals dedicated to your case. This ensures that extraction, graft preparation, and implantation happen simultaneously and efficiently, keeping your grafts out of the body for the shortest possible time.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Can I schedule a pre-visit video call with my assigned surgeon</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes. We offer video consultations via WhatsApp, WeChat, or Zoom before your travel. During this call, your assigned surgeon will review photos of your scalp, discuss your goals, explain the recommended approach, and answer any questions. This pre-visit connection helps build confidence before you even board your flight.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQElement(this)">
+ <span>Are your doctors involved in post-operative follow-up care</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Your surgeon personally examines your scalp before you leave the clinic and schedules follow-up evaluations at 1 week, 1 month, 3 months, 6 months, and 12 months. For international patients, follow-ups are conducted via photo submissions and video calls. The same doctor who performed your surgery reviews your progress at every stage.
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Copy Notification -->
+ <div class="copy-notification" id="copyNotification">
+ <i class="fas fa-check-circle"></i>
+ <span id="copyText">Copied successfully!</span>
+ </div>
+
+ <!-- Contact -->
+ <section class="contact" id="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Contact Us</h2>
+ <div class="gold-divider"></div>
+ <p>Click to copy contact information</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+ <i class="fab fa-weixin"></i>
+ <h4>WeChat</h4>
+ <p>15810155700</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+ <i class="fab fa-whatsapp"></i>
+ <h4>WhatsApp</h4>
+ <p>+86 13730143529</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+ <i class="fas fa-envelope"></i>
+ <h4>Email</h4>
+ <p>hairtransplant@qq.com</p>
+ </div>
+ <div class="contact-item qrcode-card">
+ <img src="images/erweima.jpg" alt="WeChat QR Code">
+ </div>
+ </div>
+ 
+ <!-- Three Column Layout: Form | Info | Image -->
+ <div class="contact-three-column">
+ <div class="contact-form-column">
+ <form id="contactForm" class="contact-form" novalidate>
+ <h3>Get Free Consultation</h3>
+ <div class="form-group">
+ <input type="text" id="contactName" name="nickname" placeholder="Your Name *" required>
+ </div>
+ <div class="form-group">
+ <input type="text" id="contactPhone" name="contact" placeholder="Phone/WeChat/WhatsApp *" required>
+ </div>
+ <div class="form-group">
+ <select id="contactProject" name="project" title="Please select a service">
+ <option value="">Select Service *</option>
+ <option value="发际线种植">Hairline Transplant</option>
+ <option value="头发加密">Hair Thickening</option>
+ <option value="秃顶植发">Baldness Restoration</option>
+ <option value="眉毛种植">Eyebrow Transplant</option>
+ <option value="胡须种植">Beard Transplant</option>
+ <option value="鬓角种植">Sideburns Transplant</option>
+ <option value="体毛种植">Body Hair Transplant</option>
+ <option value="脱发治疗">Hair Loss Treatment</option>
+ <option value="头发养护">Hair Care</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <textarea id="contactMessage" name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+ </div>
+ <button type="button" id="contactSubmitBtn" class="btn btn-primary">Send Message</button>
+ </form>
+ 
+ <div class="about-barley-card">
+ <h4>About Barley</h4>
+ <p>Established by a team of doctors with 31 branches in China's major cities, Barley Microneedle Hair Transplant Hospital has always been pursuing the best technology, better quality and more safety to help you with all kinds of hair loss problems.</p>
+ </div>
+ </div>
+ 
+ <div class="contact-info-column">
+ <div class="contact-info-top">
+ <h3>You Might Also Want to Know</h3>
+ <p>Everyone's hair loss journey and solution are unique due to a variety of factors. Our hair restoration experts will assist you in determining the root cause and the best solution for your hair restoration plan. If you have any questions, please ask; we are happy to assist.</p>
+ </div>
+ <div class="contact-info-bottom">
+ <img src="images/test.jpg" alt="Hair Transplant Consultation">
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="hairline-transplant.html">Hairline Transplant</a></li>
+ <li><a href="hair-thickening.html">Hair Thickening</a></li>
+ <li><a href="baldness-restoration.html">Baldness Restoration</a></li>
+ <li><a href="eyebrow-transplant.html">Eyebrow Transplant</a></li>
+ <li><a href="beard-transplant.html">Beard Transplant</a></li>
+ <li><a href="body-hair-transplant.html">Body Hair Transplant</a></li>
+ <li><a href="scar-hair-transplant.html">Scar Hair Transplant</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Loss Education</h4>
+ <ul>
+ <li><a href="hair-loss-treatment.html">Hair Loss Treatment</a></li>
+ <li><a href="hair-care.html">Hair Care</a></li>
+ <li><a href="minoxidil.html">Minoxidil</a></li>
+ <li><a href="finasteride.html">Finasteride</a></li>
+ <li><a href="male-hair-loss-guide.html">Male Hair Loss Guide</a></li>
+ <li><a href="female-hair-loss-guide.html">Female Hair Loss Guide</a></li>
+ <li><a href="is-hair-loss-genetic.html">Is Hair Loss Genetic</a></li>
+ <li><a href="does-daily-hair-loss-lead-to-balding.html">Daily Hair Loss vs Balding</a></li>
+ <li><a href="hair-loss-calculator.html">Hair Loss Calculator</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Transplant Education</h4>
+ <ul>
+ <li><a href="hair-transplant-cost.html">Hair Transplant Cost</a></li>
+ <li><a href="fue-hair-transplant.html">FUE Hair Transplant</a></li>
+ <li><a href="fut-hair-transplant.html">FUT Hair Transplant</a></li>
+ <li><a href="no-shave-hair-transplant.html">No-Shave Hair Transplant</a></li>
+ <li><a href="hair-transplant-process.html">Hair Transplant Process</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="reviews.html">Patient Reviews</a></li>
+ <li><a href="travel-to-china.html">Travel to China</a></li>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copyright">
+ <p>&copy; 2006-2026 Barley Hair Transplant Hospital. All rights reserved.</p>
+ <p class="footer-details">Pioneer in microneedle hair transplant technology | 30+ direct-operated clinics worldwide</p>
+ <p class="footer-disclaimer">Disclaimer: The information on this website is for educational purposes only and does not constitute medical advice. Please consult with a qualified healthcare professional for personalized treatment recommendations.</p>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Back to Top -->
+ <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/main.js"></script>
+ <script>
+ // — form2026.js - — — —
+ window.ZF_FORM_CONFIG = {
+ wechat: "15810155700",
+ qrcode: { enable: false, src: "/images/erweima.jpg" },
+ display: {
+ pcFloat: true,
+ mobileMode: "mini"
+ },
+ wechatRow: {
+ enable: false
+ },
+ language: {
+ enable: true,
+ showSwitch: false,
+ default: "en"
+ }
+ };
+ </script>
+ <script src="/sendemail/form2026.js"></script>
+</body>
+</html>
+

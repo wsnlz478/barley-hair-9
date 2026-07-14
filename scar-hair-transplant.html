@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<!-- ========================================
+ scar-hair-transplant - Barley Hair Transplant Hospital
+ Page: scar-hair-transplant.html
+ ======================================== -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Scar Hair Transplant | Barley Hair Transplant Hospital</title>
+ <meta name="description" content="Scar hair transplant at Barley Hair Transplant Hospital - Cover FUT scars, injury scars, and restore hair in scarred areas with our patented microneedle technology.">
+ <meta name="keywords" content="scar hair transplant, FUT scar repair, scar coverage, hair transplant scar, scar restoration">
+ <meta name="author" content="Barley Hair Transplant Hospital">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+ <meta property="og:title" content="Scar Hair Transplant | Barley Hair Transplant Hospital">
+ <meta property="og:description" content="Scar hair transplant at Barley Hair Transplant Hospital - Cover FUT scars and restore hair in scarred areas with our patented microneedle technology.">
+ <meta property="og:url" content="https://www.barleyhair.com/scar-hair-transplant.html">
+ <meta property="og:site_name" content="Barley Hair Transplant Hospital">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:image" content="https://www.barleyhair.com/Banner/hero-5.jpg">
+<style>
+ /* Page-specific styles for scar-hair-transplant.html */
+ .content-card {
+ background: var(--white);
+ padding: 30px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-sm);
+ margin-bottom: 25px;
+ }
+ .content-card h3 {
+ font-size: 26px;
+ color: var(--primary-blue);
+ margin-bottom: 18px;
+ }
+ .content-card p {
+ font-size: 17px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ margin-bottom: 15px;
+ }
+ .content-card ul {
+ margin-left: 20px;
+ margin-bottom: 15px;
+ }
+ .content-card ul li {
+ font-size: 17px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ margin-bottom: 10px;
+ }
+ .feature-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px;
+ margin-top: 40px;
+ }
+ .feature-card {
+ background: var(--white);
+ padding: 35px 30px;
+ border-radius: 8px;
+ box-shadow: var(--shadow-sm);
+ text-align: center;
+ transition: all 0.3s ease;
+ }
+ .feature-card:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
+ }
+ .feature-card i {
+ font-size: 48px;
+ color: var(--primary-blue);
+ margin-bottom: 20px;
+ }
+ .feature-card h4 {
+ font-size: 22px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+ }
+ .feature-card p {
+ font-size: 16px;
+ color: var(--text-gray);
+ line-height: 1.8;
+ }
+ .service-detail-section {
+ padding: 80px 0;
+ background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+ }
+ .enhanced-section-header {
+ text-align: center;
+ margin-bottom: 60px;
+ }
+ .section-badge {
+ display: inline-block;
+ background: var(--gradient-primary);
+ color: var(--white);
+ padding: 8px 20px;
+ border-radius: 20px;
+ font-size: 14px;
+ font-weight: 600;
+ margin-bottom: 20px;
+ }
+ .enhanced-section-header h1 {
+ font-size: 42px;
+ color: var(--primary-blue);
+ margin-bottom: 15px;
+ }
+ .enhanced-section-header p {
+ font-size: 18px;
+ color: var(--text-gray);
+ }
+ .service-overview-accent {
+ background: var(--white);
+ border-radius: 16px;
+ padding: 50px;
+ box-shadow: var(--shadow-md);
+ margin-bottom: 60px;
+ }
+ .overview-accent-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ align-items: center;
+ }
+ .overview-accent-image-wrapper {
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: var(--shadow-md);
+ }
+ .overview-accent-image-wrapper img {
+ width: 100%;
+ height: auto;
+ display: block;
+ }
+ .overview-accent-subtitle {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 16px;
+ color: var(--primary-blue);
+ font-weight: 600;
+ margin-bottom: 15px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+ .overview-accent-content h3 {
+ font-size: 32px;
+ color: var(--primary-blue);
+ margin-bottom: 20px;
+ }
+ .overview-accent-content p {
+ font-size: 18px;
+ color: var(--text-gray);
+ line-height: 1.9;
+ margin-bottom: 25px;
+ }
+ .overview-accent-features {
+ list-style: none;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+ }
+ .overview-accent-feature {
+ display: flex;
+ align-items: start;
+ gap: 15px;
+ }
+ .overview-accent-feature i {
+ font-size: 24px;
+ color: var(--accent-gold);
+ margin-top: 5px;
+ }
+ .overview-accent-feature-text h4 {
+ font-size: 18px;
+ color: var(--primary-blue);
+ margin-bottom: 8px;
+ }
+ .overview-accent-feature-text p {
+ font-size: 15px;
+ color: var(--text-gray);
+ line-height: 1.7;
+ margin: 0;
+ }
+ @media (max-width: 992px) {
+ .overview-accent-grid {
+ grid-template-columns: 1fr;
+ }
+ .overview-accent-features {
+ grid-template-columns: 1fr;
+ }
+ }
+ @media (max-width: 768px) {
+ .feature-grid {
+ grid-template-columns: 1fr;
+ }
+ .content-card {
+ padding: 20px;
+ }
+ .service-overview-accent {
+ padding: 30px;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- ============ Header ============ -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <img src="images/logo.png" alt="Barley Hair Transplant Hospital">
+ <span class="logo-text-desktop">Barley Hair Transplant Hospital</span>
+ <span class="logo-text-mobile">Barley Hair Hospital</span>
+ </div>
+ <div class="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html" class="active">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </header>
+
+ <!-- ============ Hero Section ============ -->
+ <section class="hero">
+ <div class="hero-slides" id="heroSlides">
+ <div class="hero-slide">
+ <img src="Banner/hero-3.jpg" alt="Scar hair transplant at Barley">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h1>Scar Hair Transplant</h1>
+ <p>Cover scars and restore confidence with our advanced microneedle technology</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-10.jpg" alt="Scar coverage results">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Natural Scar Coverage</h2>
+ <p>Our patented microneedle technology seamlessly restores hair in scarred areas</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-slide">
+ <img src="Banner/hero-15.jpg" alt="Permanent scar restoration">
+ <div class="hero-overlay">
+ <div class="hero-content">
+ <h2>Permanent Results You Can Trust</h2>
+ <p>Life-changing transformations backed by 18 years of clinical expertise</p>
+ <a href="contact.html" class="btn">Schedule Free Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Scar Treatment Section -->
+ <section class="content-section">
+ <div class="container">
+ <div class="two-column-grid">
+ <div class="column-text">
+ <h2>Scar Treatment</h2>
+ <p>Scar hair transplants are commonly misunderstood as simple lines or marks on the skin. They are actually areas of damaged tissue that remain after the skin heals from an injury. Scars can be raised or flat, smooth or bumpy, pinkish-brown or have a depression in the center where it was torn open.</p>
+ <p>Scars are caused by the body's natural healing process and can occur after an injury or as a result of surgery. When a scar appears on the scalp or face, it has a negative impact on one's mood and social interactions. If you have a visible scar in your brow, beard, or any other area of your head, scar treatment can help you cover visible scars and restore hair growth in the affected area.</p>
+ </div>
+ <div class="column-media">
+ <img src="images/test3.jpg" alt="Scar Hair Transplant Treatment" style="width:100%;border-radius:12px;box-shadow:var(--shadow-md);">
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Procedure Section -->
+ <section class="content-section bg-light">
+ <div class="container">
+ <h2>Procedure</h2>
+ <p>A hair transplant is a cosmetic procedure in which healthy hair is transplanted from a 'donor' area, usually the back of the head, to a 'recipient' area where it is needed. When someone gets a scar in an area that requires hair to cover, it's important to let the doctor examine them personally to see if there are any blood circulation issues that could lead to more problems later on.</p>
+ <p>Following a thorough examination and consultation, our experts recommend a suitable course of action. These surgeries, which produce quick and permanent results, are performed using a variety of surgical options such as FUE, FUT, and Barley's Microneedle method.</p>
+ <p>Scar treatment employs cutting-edge technology, including the use of an Implanter Pen to implant grafted hair follicles. Implanter pens are ideal for implanting grafts, and Barley experts can smoothly control the density and direction of the implanted follicle.</p>
+ <p>A hair transplant may be an effective treatment for scars on the scalp, brows, and beard. While long-term treatments such as laser therapy or cryotherapy cannot reduce scars, hair transplant is an excellent alternative that may also help improve the appearance of other aspects of your face.</p>
+ </div>
+ </section>
+
+ <!-- Types of Scars Section -->
+ <section class="content-section">
+ <div class="container">
+ <div class="section-title">
+ <h2>Types of Scars We Treat</h2>
+ <div class="gold-divider"></div>
+ <p>Our experts specialize in treating various types of scars</p>
+ </div>
+ <div class="services-grid">
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-cut"></i>
+ </div>
+ <h3>FUT Scars</h3>
+ <p>Cover the linear scar left from traditional FUT hair transplant procedures with natural-looking hair growth.</p>
+ </div>
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-fire"></i>
+ </div>
+ <h3>Burn Scars</h3>
+ <p>Restore hair in areas affected by burn injuries with our specialized microneedle technique.</p>
+ </div>
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-band-aid"></i>
+ </div>
+ <h3>Injury Scars</h3>
+ <p>Cover scars from accidents, surgeries, or trauma with precise hair follicle placement.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Before & After Gallery -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Real Patient Transformations</h2>
+ <div class="gold-divider"></div>
+ <p>See the results that have earned our patients' lasting confidence</p>
+ </div>
+ <div class="gallery-grid" id="beforeAfterGallery">
+ <div class="gallery-item">
+ <img src="manBald/manBald-12.jpg" alt="Scar hair transplant before and after">
+ <div class="gallery-overlay">
+ <h4>Scar Coverage</h4>
+ <p>Natural-looking hair growth covering a scalp scar</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-33.jpg" alt="FUT scar repair results">
+ <div class="gallery-overlay">
+ <h4>FUT Scar Repair</h4>
+ <p>Complete coverage of previous FUT strip scar</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="women/women-15.jpg" alt="Injury scar restoration">
+ <div class="gallery-overlay">
+ <h4>Injury Scar Restoration</h4>
+ <p>Seamless hair restoration over injury scars</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manBald/manBald-26.jpg" alt="Burn scar coverage">
+ <div class="gallery-overlay">
+ <h4>Burn Scar Coverage</h4>
+ <p>Natural density restoration over burn scar tissue</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="Eyebrow/Eyebrow-2.jpg" alt="Eyebrow scar repair">
+ <div class="gallery-overlay">
+ <h4>Eyebrow Scar Repair</h4>
+ <p>Precise follicle placement in eyebrow scar area</p>
+ </div>
+ </div>
+ <div class="gallery-item">
+ <img src="manHairline/manHairline-5.jpg" alt="Beard scar restoration">
+ <div class="gallery-overlay">
+ <h4>Beard Scar Restoration</h4>
+ <p>Natural beard hair growth over facial scar</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Satisfied Patients -->
+ <section class="technology">
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Satisfied Patients</h2>
+ <div class="gold-divider"></div>
+ <p>Real patients, real confidence restored</p>
+ </div>
+ <div class="photos-grid" id="doctorPatientPhotos">
+ <div class="photo-item">
+ <img src="Photos/Photos-8.jpg" alt="Satisfied scar transplant patient">
+ <div class="photo-caption">
+ <h4>Thrilled with Results</h4>
+ <p>Patient proudly showing their natural-looking scar coverage outcome</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-41.jpg" alt="Scar repair patient journey">
+ <div class="photo-caption">
+ <h4>Transformation Complete</h4>
+ <p>Patient celebrating their remarkable new look</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-58.jpg" alt="Happy scar treatment patient">
+ <div class="photo-caption">
+ <h4>Newfound Confidence</h4>
+ <p>Patient showcasing their refreshed, natural hairline</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-17.jpg" alt="Scar transplant success">
+ <div class="photo-caption">
+ <h4>Dramatic Change</h4>
+ <p>Patient revealing their impressive before-and-after transformation</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-32.jpg" alt="International scar transplant patient">
+ <div class="photo-caption">
+ <h4>Trusted by International Patients</h4>
+ <p>Overseas visitor delighted with their exceptional results</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-62.jpg" alt="Scar patient testimonial">
+ <div class="photo-caption">
+ <h4>Outstanding Results</h4>
+ <p>Patient thrilled with their beautiful new hair</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-25.jpg" alt="Scar patient story">
+ <div class="photo-caption">
+ <h4>Wonderful Experience</h4>
+ <p>Satisfied patient with our dedicated medical team</p>
+ </div>
+ </div>
+ <div class="photo-item">
+ <img src="Photos/Photos-49.jpg" alt="Scar patient outcome">
+ <div class="photo-caption">
+ <h4>Impressive Transformation</h4>
+ <p>Patient demonstrating their successful restoration</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Our Clinic Environment -->
+ <section>
+ <div class="container">
+ <div class="section-title">
+ <h2>Our Clinic Environment</h2>
+ <div class="gold-divider"></div>
+ <p>Modern, comfortable clinics designed to put you at ease from the moment you arrive</p>
+ </div>
+ <div class="hospital-grid" id="hospitalGallery">
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-13.jpg" alt="Modern clinic facility">
+ <div class="hospital-caption">
+ <h4>State-of-the-Art Clinic</h4>
+ <p>Equipped with the latest technology</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-25.jpg" alt="Patient waiting area">
+ <div class="hospital-caption">
+ <h4>Premium Lounge</h4>
+ <p>Relax in our comfortable waiting area</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-42.jpg" alt="Operating room">
+ <div class="hospital-caption">
+ <h4>Advanced Operating Suite</h4>
+ <p>Certified sterile environment</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-55.jpg" alt="Consultation room">
+ <div class="hospital-caption">
+ <h4>Private Consultation Space</h4>
+ <p>Confidential and professional discussions</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-66.jpg" alt="Recovery area">
+ <div class="hospital-caption">
+ <h4>Comfortable Recovery Zone</h4>
+ <p>Relaxing space for post-procedure rest</p>
+ </div>
+ </div>
+ <div class="hospital-item">
+ <img src="Hospital/Hospital-73.jpg" alt="Reception area">
+ <div class="hospital-caption">
+ <h4>Elegant Reception</h4>
+ <p>Warm welcome from our team</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- FAQ -->
+ <section id="faq">
+ <div class="container">
+ <div class="section-title">
+ <h2>Frequently Asked Questions About Scar Hair Transplant</h2>
+ <div class="gold-divider"></div>
+ <p>Honest answers to the questions patients ask most</p>
+ </div>
+ <div id="faqContainer">
+ <div class="faq-item active">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>Can hair be transplanted into a scar</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Yes, hair can be transplanted into scar tissue, though the procedure requires special expertise. Scar tissue has different blood supply and texture compared to normal skin, so the surgeon must carefully evaluate the scar's maturity, thickness, and blood circulation before proceeding. At Barley, our experienced surgeons use specialized techniques with our patented microneedle technology to ensure optimal graft survival in scarred areas.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>How long should I wait after getting a scar before considering a hair transplant</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ We generally recommend waiting at least 12 months after the injury or surgery to allow the scar to fully mature and stabilize. This ensures the tissue has adequate blood supply to support transplanted hair follicles. During your consultation, our surgeons will assess the scar's readiness and advise you on the optimal timing for the best results.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>What types of scars can be treated with hair transplantation</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ We treat various types of scars including FUT strip scars, burn scars, injury scars, surgical scars, and acne scars. Each type requires a different approach — FUT scars tend to have predictable results, while burn scars may require multiple sessions due to compromised blood supply. Our surgeons will evaluate your specific scar type and recommend the best treatment plan during your consultation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>What is the success rate of hair transplants in scar tissue</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ While graft survival rates in scar tissue are slightly lower than in normal skin (typically 85-92% compared to our standard 98%), our microneedle technology significantly improves outcomes. The precision of our 0.6mm extraction tools minimizes trauma to the delicate scar tissue, and our specialized implantation technique ensures optimal follicle placement. Most patients achieve excellent coverage that effectively camouflages the scar.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>Will the scar be completely invisible after the transplant</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ In most cases, the scar becomes significantly less visible after hair grows through the transplanted area. The hair effectively camouflages the scar, making it nearly undetectable in normal social interactions. However, complete invisibility depends on factors such as scar size, type, and the contrast between your hair color and skin tone. Our surgeons will provide realistic expectations during your consultation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>Does scar hair transplant require special aftercare</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Scar transplants require the same standard aftercare as regular hair transplants, with a few additional precautions. You'll need to keep the area clean, avoid touching or scratching the treated area, and follow our detailed post-operative instructions. Because scar tissue has different healing characteristics, we may recommend additional follow-up visits to monitor progress and ensure optimal graft survival.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>How many sessions are needed for scar coverage</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Most small to medium scars can be covered in a single session. Larger or more complex scars, particularly burn scars with compromised blood supply, may require two sessions to achieve optimal density. During your consultation, our surgeons will assess the scar's size and condition to determine the most efficient treatment plan for your specific situation.
+ </div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFAQ(this)">
+ <span>What makes Barley's approach to scar transplants different</span>
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ <div class="faq-answer">
+ Barley uses proprietary 0.6mm microneedle technology that creates significantly smaller incisions than conventional tools. This is especially important for scar tissue, which has limited blood supply and healing capacity. Our patented 360— rotation implant pen ensures precise angle and direction control, while our senior surgeons' extensive experience with scar cases ensures the best possible outcomes. We've successfully treated thousands of scar patients from over 50 countries.
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Testimonials Section -->
+ <section class="testimonials">
+ <div class="container">
+ <div class="section-title">
+ <h2>Patient Testimonials</h2>
+ <div class="gold-divider"></div>
+ <p>Real stories from patients who successfully covered their scars</p>
+ </div>
+ <div class="testimonials-grid">
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"Thumbs up to their team for delicately covering the scar on my head that affected my self-esteem. It feels like I never had it because doctors covered it so well that it looks natural. Thank you again for your work."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">M</div>
+ <div class="testimonial-info">
+ <h4>Matt</h4>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"I thought the staff were very friendly and accommodating. They were quick and thorough with the preparations and the surgery, while long and uncomfortable was manageable because the doctors were very attentive to my pain levels."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">J</div>
+ <div class="testimonial-info">
+ <h4>Jared</h4>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="testimonial-stars">
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ <i class="fas fa-star"></i>
+ </div>
+ <p class="testimonial-text">"Needed a fuller brow and cover a scar I had after a small incident. Went to Barley and got it covered with simple scar treatment. There is no scar visible and I have nice and dense brows. Best decision ever."</p>
+ <div class="testimonial-author">
+ <div class="testimonial-avatar">B</div>
+ <div class="testimonial-info">
+ <h4>Best Result</h4>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Contact -->
+ <section class="contact" id="contact">
+ <div class="container">
+ <div class="section-title">
+ <h2>Contact Us</h2>
+ <div class="gold-divider"></div>
+ <p>Click to copy contact information</p>
+ </div>
+ <div class="contact-items">
+ <div class="contact-item clickable" onclick="copyToClipboard('15810155700', 'WeChat')">
+ <i class="fab fa-weixin"></i>
+ <h4>WeChat</h4>
+ <p>15810155700</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('+86 13730143529', 'WhatsApp')">
+ <i class="fab fa-whatsapp"></i>
+ <h4>WhatsApp</h4>
+ <p>+86 13730143529</p>
+ </div>
+ <div class="contact-item clickable" onclick="copyToClipboard('hairtransplant@qq.com', 'Email')">
+ <i class="fas fa-envelope"></i>
+ <h4>Email</h4>
+ <p>hairtransplant@qq.com</p>
+ </div>
+ <div class="contact-item qrcode-card">
+ <img src="images/erweima.jpg" alt="WeChat QR Code">
+ </div>
+ </div>
+ 
+ <!-- Three Column Layout: Form | Info | Image -->
+ <div class="contact-three-column">
+ <div class="contact-form-column">
+ <form id="contactForm" class="contact-form" novalidate>
+ <h3>Get Free Consultation</h3>
+ <div class="form-group">
+ <input type="text" id="contactName" name="nickname" placeholder="Your Name *" required>
+ </div>
+ <div class="form-group">
+ <input type="text" id="contactPhone" name="contact" placeholder="Phone/WeChat/WhatsApp *" required>
+ </div>
+ <div class="form-group">
+ <select id="contactProject" name="project" title="Please select a service">
+ <option value="">Select Service *</option>
+ <option value="发际线种植">Hairline Transplant</option>
+<option value="头发加密">Hair Thickening</option>
+ <option value="秃顶植发">Baldness Restoration</option>
+<option value="眉毛种植">Eyebrow Transplant</option>
+<option value="胡须种植">Beard Transplant</option>
+<option value="鬓角种植">Sideburns Transplant</option>
+<option value="体毛种植">Body Hair Transplant</option>
+<option value="脱发治疗">Hair Loss Treatment</option>
+<option value="头发养护">Hair Care</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <textarea id="contactMessage" name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
+ </div>
+ <button type="button" id="contactSubmitBtn" class="btn btn-primary">Send Message</button>
+ </form>
+ 
+ <div class="about-barley-card">
+ <h4>About Barley</h4>
+ <p>Established by a team of doctors with 31 branches in China's major cities, Barley Microneedle Hair Transplant Hospital has always been pursuing the best technology, better quality and more safety to help you with all kinds of hair loss problems.</p>
+ </div>
+ </div>
+ 
+ <div class="contact-info-column">
+ <div class="contact-info-top">
+ <h3>You Might Also Want to Know</h3>
+ <p>Everyone's hair loss journey and solution are unique due to a variety of factors. Our hair restoration experts will assist you in determining the root cause and the best solution for your hair restoration plan. If you have any questions, please ask; we are happy to assist.</p>
+ </div>
+ <div class="contact-info-bottom">
+ <img src="images/test.jpg" alt="Hair Transplant Consultation">
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h4>Services</h4>
+ <ul>
+ <li><a href="hairline-transplant.html">Hairline Transplant</a></li>
+ <li><a href="hair-thickening.html">Hair Thickening</a></li>
+ <li><a href="baldness-restoration.html">Baldness Restoration</a></li>
+ <li><a href="eyebrow-transplant.html">Eyebrow Transplant</a></li>
+ <li><a href="beard-transplant.html">Beard Transplant</a></li>
+ <li><a href="body-hair-transplant.html">Body Hair Transplant</a></li>
+ <li><a href="scar-hair-transplant.html">Scar Hair Transplant</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Loss Education</h4>
+ <ul>
+ <li><a href="hair-loss-treatment.html">Hair Loss Treatment</a></li>
+ <li><a href="hair-care.html">Hair Care</a></li>
+ <li><a href="minoxidil.html">Minoxidil</a></li>
+ <li><a href="finasteride.html">Finasteride</a></li>
+ <li><a href="male-hair-loss-guide.html">Male Hair Loss Guide</a></li>
+ <li><a href="female-hair-loss-guide.html">Female Hair Loss Guide</a></li>
+ <li><a href="is-hair-loss-genetic.html">Is Hair Loss Genetic</a></li>
+ <li><a href="does-daily-hair-loss-lead-to-balding.html">Daily Hair Loss vs Balding</a></li>
+ <li><a href="hair-loss-calculator.html">Hair Loss Calculator</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Hair Transplant Education</h4>
+ <ul>
+ <li><a href="hair-transplant-cost.html">Hair Transplant Cost</a></li>
+ <li><a href="fue-hair-transplant.html">FUE Hair Transplant</a></li>
+ <li><a href="fut-hair-transplant.html">FUT Hair Transplant</a></li>
+ <li><a href="no-shave-hair-transplant.html">No-Shave Hair Transplant</a></li>
+ <li><a href="hair-transplant-process.html">Hair Transplant Process</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="reviews.html">Patient Reviews</a></li>
+ <li><a href="travel-to-china.html">Travel to China</a></li>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="technology.html">Technology</a></li>
+ <li><a href="doctors.html">Doctors</a></li>
+ <li><a href="cases.html">Cases</a></li>
+ <li><a href="faq.html">FAQ</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copyright">
+ <p>&copy; 2006-2026 Barley Hair Transplant Hospital. All rights reserved.</p>
+ <p class="footer-details">Leader in innovative microneedle hair restoration | 30+ clinic locations across China</p>
+ <p class="footer-disclaimer">Disclaimer: The information on this website is for educational purposes only and does not constitute medical advice. Please consult with a qualified healthcare professional for personalized treatment recommendations.</p>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Back to Top -->
+ <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+<script src="js/main.js"></script>
+ <script>
+ window.ZF_FORM_CONFIG = {
+ wechat: "15810155700",
+ qrcode: { enable: false, src: "/images/erweima.jpg" },
+ display: {
+ pcFloat: true,
+ mobileMode: "mini"
+ },
+ wechatRow: {
+ enable: false
+ },
+ language: {
+ enable: true,
+ showSwitch: false,
+ default: "en"
+ }
+ };
+ </script>
+ <script src="/sendemail/form2026.js"></script>
+</body>
+</html>
